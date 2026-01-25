@@ -5,7 +5,7 @@ Why I started learning DevOps & Cloud?
 Because manual work is boring, automation is smart and the future lives in the cloud like aws,azure,gcp.
 
 Where I want to reach?
-My goal is to become a pro DevOps engineer, work in Red Hat or any open-source company, and help others learn DevOps.
+My goal is to become a pro DevOps engineer, work in Red Hat or any open-source company, and help others to learn DevOps.
 
 How I’ll stay consistent every day?
 Beacause of less salary motivate me everyday.
