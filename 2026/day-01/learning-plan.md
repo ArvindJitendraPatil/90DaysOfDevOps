@@ -1,5 +1,5 @@
 Understanding of DevOps & Cloud?
-DevOps fixes the fight between developers and opetaions team and Cloud provide you unlimited computers without buying them.
+DevOps fixes the fight between developers and operations team and Cloud provide you unlimited computers without buying them.
 
 Why I started learning DevOps & Cloud?
 Because manual work is boring, automation is smart and the future lives in the cloud like aws,azure,gcp.
