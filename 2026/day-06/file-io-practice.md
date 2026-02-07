@@ -11,10 +11,7 @@ Linux Fundamentals: Read & Write Text Files
  touch file.txt (create empty file)
  nano file.txt (edit file)
  printf 'Line1\nLine2' > file.txt
-3. Editing with sed:
- sed -i 's/old/new/' file.txt
- sed -i '/error/d' file.txt
-4. Useful Combinations:
+3. Useful Combinations:
  cp a.txt b.txt
  cat a.txt b.txt > merged.txt
  wc file.txt (line/word/char count)
