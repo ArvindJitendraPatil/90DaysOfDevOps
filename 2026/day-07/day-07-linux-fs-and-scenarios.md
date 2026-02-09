@@ -17,7 +17,3 @@ Scenario 4: Script Permission Issue
 2. chmod +x /home/user/backup.sh → Add execute permission.
 3. ls -l /home/user/backup.sh → Verify correct permissions.
 4. ./backup.sh → Execute script.
-Next Steps if Issues Worsen:
-1. Increase log verbosity.
-2. Check directory-level permissions.
-3. Collect strace logs or full journal dumps.
