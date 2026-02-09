@@ -5,7 +5,7 @@ Scenario 1: Service 'myapp' Not Starting
 4. ls -l /etc/myapp/ → Check config permissions.
 Scenario 2: High CPU Usage
 1. top → Real-time CPU view.
-2. ps aux --sort=-%cpu | head → Top CPU-consuming processes.
+2. ps aux --sort=-%cpu | head -5 → Top CPU-consuming processes.
 3. pidstat 1 → CPU usage per process.
 4. systemctl status <service> → Check affected services.
 Scenario 3: Finding Docker Logs
