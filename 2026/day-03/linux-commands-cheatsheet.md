@@ -25,3 +25,4 @@ Networking Commands:
 ping – check connection (ping google.com)
 ip addr – show IP (ip addr)
 curl – fetch URL it will show the raw HTML code of Google homepage.
+dig goole.com -- shows the dns.
