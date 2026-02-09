@@ -26,7 +26,8 @@ Task 3: Understand Permissions
 ls -l
 Example:
 -rw-r--r--
-Owner: rwGroup: r--
+Owner: rwx
+Group: r--
 Others: r--
 Values:
 r = 4
