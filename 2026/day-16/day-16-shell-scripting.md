@@ -1,6 +1,6 @@
 shebag : shebag is used for scrpit feature run.feacture like sh,bash,csh,zsh.
 What happens if you remove the shebang line?
-if we not used shebag in script they will used default /bin/sh and if we use bash fecature in sh. they will getting error.
+if we not used shebag in script they will used default /bin/sh and if we use bash feature in sh. they will getting error.
 
 Challenge Tasks:
 Task 1:
