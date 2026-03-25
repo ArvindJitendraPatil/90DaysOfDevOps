@@ -1,28 +1,33 @@
-Linux Commands:
-Basic Commands:
-ls – list files (e.g., ls -l)
-cd – change directory (e.g., cd /home)
-pwd – show path (pwd)
-mkdir – create folder (mkdir test)
-rm – remove file (rm file.txt)
-cp – copy file (cp a b)
-mv – move/rename (mv old new)
-touch – create file (touch notes.txt)
-cat – view content (cat notes.txt)
-vi – edit file (vi file.txt)
-Process Commands:
-ps – show processes (ps aux)
-top – CPU/process view (top)
-kill – stop process (kill 1234)
-htop – better top (htop)
-systemctl – manage services (systemctl status nginx)
-File/Permission Commands:
-chmod – change permission (chmod 755 script.sh)
-chown – change owner (chown user file)
-df – disk usage (df -h)
-du – folder size (du -sh /var/log)
-Networking Commands:
-ping – check connection (ping google.com)
-ip addr – show IP (ip addr)
-curl – fetch URL it will show the raw HTML code of Google homepage.
-dig goole.com -- shows the dns.
+
+# Linux Commands Cheat Sheet
+
+## Process Management 
+
+- `&` - Add this character to the end of command to run it in the background.
+- `ps aux` - Display full snapshot of running processes on your system.
+- `pgrep name` - Find processes by name.
+- `kill pid` - Kill a process specified by its process id(pid).
+- `top` - Display sorted information about processes.
+
+## File System
+
+- `pwd` - Display the path of current working directory.
+- `wc X` - Display the word count of X.
+- `head X` - Display the first 10 lines of X.
+- `tail X` - Display the last 10 lines of X.
+- `grep patt path/to/src` - Search for a text pattern in file.
+- `find` - Find files.
+- `chmod 777 file` - Changes file permissions.
+- `chown user:group file` - Change ownership of file.
+- `du -h` - Show file/folder size on disk.
+- `df -h` - Display free disk space(overall).
+
+## Networking troubleshooting
+
+- `ifconfig/ip a` - Display all network interfaces with IP addresses.
+- `netstat -a` - Show listening tcp and udp ports and corresponding programs.
+- `traceroute host` - Traces network path.
+- `wget url` - Download files from internet.
+- `whois domain` - Displays whois information for domain.
+- `host domain` - Displays DNS IP address for domain.
+- `nslookup domain` - Display IP address of domain.
