@@ -1,7 +1,5 @@
 # RUNBOOK for ssh service
 
-# RUNBOOK for ssh service
-
 ### This runbook provides quick troubleshooting steps if the SSH service goes down.
 
 ## Environment basics
