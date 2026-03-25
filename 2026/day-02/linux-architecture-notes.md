@@ -1,4 +1,4 @@
-# what is linux?
+# What is linux?
 Linux is a free, open‑source operating system used in servers, cloud, and embedded systems.
 # Core components of Linux :
 - Hardware :
