@@ -9,8 +9,8 @@ My goal is to become a pro DevOps engineer, work in Red Hat or any open-source c
 
 # How I’ll stay consistent every day?
 Beacause of less salary motivate me everyday.
-...............................................................
-# Hello,
+
+# Hello Team,
 1)My name is arvind. I am working as system engineer in the infosys since 3.5 years.
 2)my goals : I know the linux but i will learn the troubleshooting part of linux, how cicd pipeline is work , how to deploy 3 tier applications in kubernetes.
 3) Jenkins, Ansible, AWS
