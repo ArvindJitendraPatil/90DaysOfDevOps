@@ -15,7 +15,7 @@
 - `wc X` - Display the word count of X.
 - `head X` - Display the first 10 lines of X.
 - `tail X` - Display the last 10 lines of X.
-- `grep patt path/to/src` - Search for a text pattern in file.
+- `grep path to /src` - Search for a text pattern in file.
 - `find` - Find files.
 - `chmod 777 file` - Changes file permissions.
 - `chown user:group file` - Change ownership of file.
