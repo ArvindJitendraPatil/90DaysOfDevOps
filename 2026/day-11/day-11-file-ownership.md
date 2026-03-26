@@ -1,102 +1,122 @@
-Hint :
-Most chown/chgrp operations need sudo
-Use -R flag for recursive directory changes
-Always verify with ls -l after changes
-User must exist before using in chown
-Group must exist before using in chgrp/chown
 
-Task 1:
-ubuntu@ip-172-31-45-91:/$ ls
-bin                boot  etc   lib                lib64       media  opt   root  sbin                snap  sys  usr
-bin.usr-is-merged  dev   home  lib.usr-is-merged  lost+found  mnt    proc  run   sbin.usr-is-merged  srv   tmp  var
-ubuntu@ip-172-31-45-91:/$  cd home
-ubuntu@ip-172-31-45-91:/home$ ls
-berlin  nairobi  professor  tokyo  ubuntu
-ubuntu@ip-172-31-45-91:/home$ sudo ls -ld
-drwxr-xr-x 7 root root 4096 Feb  9 13:25 .
-ubuntu@ip-172-31-45-91:/home$ sudo ls -ld /home
-drwxr-xr-x 7 root root 4096 Feb  9 13:25 /home
-ubuntu@ip-172-31-45-91:/home$ sudo ls -ld /home/*
-drwxr-x--- 2 berlin    berlin    4096 Feb  9 13:11 /home/berlin
-drwxr-x--- 2 nairobi   nairobi   4096 Feb  9 13:34 /home/nairobi
-drwxr-x--- 2 professor professor 4096 Feb  9 12:32 /home/professor
-drwxr-x--- 2 tokyo     tokyo     4096 Feb  9 13:10 /home/tokyo
-drwxr-x--- 5 ubuntu    ubuntu    4096 Feb  9 11:38 /home/ubuntu
+#  File Ownership Challenge (chown & chgrp)
 
-owner : The owner is the main user who controls a file.
-group : the group is a set of users who share common access to it.
+## Users Created
+- tokyo
+- berlin
+- nairobi
+- professor
 
-Task 2: 
-ubuntu@ip-172-31-45-91:~$ ls -l devops-file.txt
--rw-rw-r-- 1 ubuntu ubuntu 0 Feb  9 14:27 devops-file.txt
-ubuntu@ip-172-31-45-91:~$ sudo chown tokyo devops-file.txt
-ubuntu@ip-172-31-45-91:~$ ls -l devops-file.txt
--rw-rw-r-- 1 tokyo ubuntu 0 Feb  9 14:27 devops-file.txt
-ubuntu@ip-172-31-45-91:~$ sudo chown berlin devops-file.txt
-ubuntu@ip-172-31-45-91:~$ ls -l devops-file.txt
--rw-rw-r-- 1 berlin ubuntu 0 Feb  9 14:27 devops-file.txt
+## Groups Created
+- heist-team
+- planners
+- vault-team
+- tech-team
 
-Task 3: 
-ubuntu@ip-172-31-45-91:~$ touch team-notes.txt
-ubuntu@ip-172-31-45-91:~$ ls -l team-notes.txt
--rw-rw-r-- 1 ubuntu ubuntu 0 Feb  9 14:30 team-notes.txt
-ubuntu@ip-172-31-45-91:~$ sudo groupadd heist-team
-ubuntu@ip-172-31-45-91:~$ tail -3 /etc/group
-nairobi:x:1006:
-project-team:x:1007:nairobi,tokyo
-heist-team:x:1008:
-ubuntu@ip-172-31-45-91:~$ sudo chgrp heist-team team-notes.txt
-ubuntu@ip-172-31-45-91:~$ ls -l team-notes.txt
--rw-rw-r-- 1 ubuntu heist-team 0 Feb  9 14:30 team-notes.txt
+## Files & Directories Created
+- devops-file.txt
+- app-logs/
+- bank-heist/access-codes.txt
+- bank-heist/blueprints.pdf
+- bank-heist/escape-plan.txt
+- heist-project/plans/strategy.conf
+- heist-project/vault/gold.txt
+- project-config.yml
+- team-notes.txt
 
-Task 4: Using chown you can change both owner and group together
+## Understanding Ownership
 
-ubuntu@ip-172-31-45-91:~$ ls
-app-logs   check_package.sh  devops-file.txt  hello.sh  package.sh           rancho.sh  team-notes.txt
-chatur.sh  condition.sh      filecheck.sh     num.sh    project-config.yaml  revnum.sh  user_details.sh
-ubuntu@ip-172-31-45-91:~$ ls -ld app-logs
-drwxr-xr-x 2 root root 4096 Feb  9 14:40 app-logs
-ubuntu@ip-172-31-45-91:~$ sudo chown berlin:heist-team app-logs/
-ubuntu@ip-172-31-45-91:~$ ls -ld app-logs
-drwxr-xr-x 2 berlin heist-team 4096 Feb  9 14:40 app-logs
-ubuntu@ip-172-31-45-91:~$ ls -l project-config.yaml
--rw-rw-r-- 1 professor heist-team 0 Feb  9 14:34 project-config.yaml
+- Run ls -l in your home directory
+- Identify the owner and group columns
+- Check who owns your files
 
-Task 5:
-ubuntu@ip-172-31-45-91:~$ cd heist-project
-ubuntu@ip-172-31-45-91:~/heist-project$ ls
-plans  vault
-ubuntu@ip-172-31-45-91:~/heist-project$ cd plans
-ubuntu@ip-172-31-45-91:~/heist-project/plans$ ls
-strategy.conf
-ubuntu@ip-172-31-45-91:~/heist-project/plans$ sudo groupadd planners
-ubuntu@ip-172-31-45-91:~/heist-project/plans$ tail -1 /etc/group
-planners:x:1009:
-ubuntu@ip-172-31-45-91:~/heist-project/plans$ cd
-ubuntu@ip-172-31-45-91:~$ sudo chown -R professor:planners heist-project/
-ubuntu@ip-172-31-45-91:~$ ls -ld heist-project/
-drwxrwxr-x 4 professor planners 4096 Feb  9 14:49 heist-project/
-ubuntu@ip-172-31-45-91:~$ ls -lR heist-project/
-heist-project/:
-total 8
-drwxrwxr-x 2 professor planners 4096 Feb  9 14:49 plans
-drwxrwxr-x 2 professor planners 4096 Feb  9 14:49 vault
+![snapshot](images/ls_permission.png)
 
-heist-project/plans:
-total 0
--rw-rw-r-- 1 professor planners 0 Feb  9 14:49 strategy.conf
+* Owner : The owner is usually the user who created the file or directory. Owner can change permission of file.
+* Group : The group is a collection of users who share access to the file.
 
-heist-project/vault:
-total 0
--rw-rw-r-- 1 professor planners 0 Feb  9 14:52 gold.txt
+## Basic chown Operations
 
-Task 6:
-ubuntu@ip-172-31-45-91:~/bank-heist$ sudo ls -l
-total 0
--rw-r--r-- 1 tokyo   vault-team 0 Feb  9 15:06 access-codes.txt
--rw-r--r-- 1 berlin  tech-team  0 Feb  9 15:06 blueprints.pdf
--rw-r--r-- 1 nairobi vault-team 0 Feb  9 15:06 escape-plan.txt
-ubuntu@ip-172-31-45-91:~/bank-heist$
+- Create file devops-file.txt
+- Check current owner: ls -l devops-file.txt
+- Change owner to berlin
+- Verify the changes
 
+![snapshot](images/chown_berlin.png)
 
+## Basic chgrp Operations 
 
+- Create file team-notes.txt
+- Check current group: ls -l team-notes.txt
+- Create group: sudo groupadd heist-team
+- Change file group to heist-team
+- Verify the change
+
+![snapshot](images/heist_grp.png)
+
+## Combined Owner & Group Change
+
+Using chown you can change both owner and group together:
+
+- Create file project-config.yaml
+- Change owner to professor AND group to heist-team (one command)
+- Create directory app-logs/
+- Change its owner to berlin and group to heist-team
+
+![snapshot](images/owner_grp.png)
+
+## Recursive Ownership
+
+1. Create directory structure:
+   ```
+   mkdir -p heist-project/vault
+   mkdir -p heist-project/plans
+   touch heist-project/vault/gold.txt
+   touch heist-project/plans/strategy.conf
+   ```
+
+2. Create group `planners`: `sudo groupadd planners`
+
+3. Change ownership of entire `heist-project/` directory:
+   - Owner: `professor`
+   - Group: `planners`
+   - Use recursive flag (`-R`)
+
+4. Verify all files and subdirectories changed: `ls -lR heist-project/`
+
+![snapshot](images/recursive.png)
+
+### Task 6: Practice Challenge
+
+1. Create users: `tokyo`, `berlin`, `nairobi` (if not already created)
+2. Create groups: `vault-team`, `tech-team`
+3. Create directory: `bank-heist/`
+4. Create 3 files inside:
+   ```
+   touch bank-heist/access-codes.txt
+   touch bank-heist/blueprints.pdf
+   touch bank-heist/escape-plan.txt
+   ```
+
+5. Set different ownership:
+   - `access-codes.txt` → owner: `tokyo`, group: `vault-team`
+   - `blueprints.pdf` → owner: `berlin`, group: `tech-team`
+   - `escape-plan.txt` → owner: `nairobi`, group: `vault-team`
+
+**Verify:** `ls -l bank-heist/`
+
+![snapshot](images/task6.png)
+
+## Commands Used
+
+- View ownership : `ls -l filename`
+- Change owner only : `sudo chown newowner filename`
+- Change group only : `sudo chgrp newgroup filename`
+- Change both owner and group : `sudo chown owner:group filename`
+- Recursive change (directories) : `sudo chown -R owner:group directory/`
+- Change only group with chown : `sudo chown :groupname filename` 
+
+## What I Learned
+
+* Managing User & Groups
+* Understood file ownership
