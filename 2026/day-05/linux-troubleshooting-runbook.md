@@ -6,16 +6,17 @@
 
 * Command : `uname -a`
 
-  Output : `Linux arvind 6.14.0-37-generic #37~24.04.1-Ubuntu SMP PREEMPT_DYNAMIC Thu Nov 20 10:25:38 UTC 2 x86_64 x86_64 x86_64 GNU/Linux`
+  Output : arvind@ip-172-31-13-69:~$ uname -a
+- `Linux ip-172-31-13-69 6.17.0-1007-aws #7~24.04.1-Ubuntu SMP Thu Jan 22 21:04:49 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux`
 
   Observation : Kernel version and architecture confirmed.
 
 * Command : `cat /etc/os-release`
 
-  Output : `PRETTY_NAME="Ubuntu 24.04.3 LTS"`
+  Output : `PRETTY_NAME="Ubuntu 24.04.4 LTS"`
            `NAME="Ubuntu"`
            `VERSION_ID="24.04"`
-           `VERSION="24.04.3 LTS (Noble Numbat)"`
+           `VERSION="24.04.4 LTS (Noble Numbat)"`
           
   Observation : Confirms distribution and release version.
 
