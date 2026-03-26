@@ -1,20 +1,34 @@
-Linux Fundamentals: Read & Write Text Files
-1. Reading Files:
- cat filename.txt
- less filename.txt
- head filename.txt
- tail filename.txt
- tail -f filename (live logs)
-2. Writing / Creating Files:
- echo 'text' > file.txt (overwrite)
- echo 'text' >> file.txt (append)
- touch file.txt (create empty file)
- nano file.txt (edit file)
- printf 'Line1\nLine2' > file.txt
-3. Useful Combinations:
- cp a.txt b.txt
- cat a.txt b.txt > merged.txt
- wc file.txt (line/word/char count)
+# Read and Write text files in Linux
+
+* `touch notes.txt`
+
+   Create a textfile with name notes.txt
+
+* `echo "Hi, I am arvind" > notes.txt`
+
+   Write to notes.txt
+
+* `echo "I am a devops enthusiast" >> notes.txt`
+
+  `echo "Today is day06 of learning linux" >> notes.txt`
+  
+   Append to notes.txt
+
+* `cat notes.txt`
+
+   Read notes.txt
+
+* `cat notes.txt | head -n 1`
+
+   Read first line of notes.txt
+
+* `cat notes.txt | tail -n 2`
+
+   Read last two lines of notes.txt
+
+* `echo "Learn using tee command" | tee -a notes.txt`
+<img width="1281" height="688" alt="image" src="https://github.com/user-attachments/assets/d4eef12b-ae4f-470e-876a-8f1ec01be512" />
+
 Summary:
-Read: cat, less, head, tail, tail -f
-Write: echo, printf, nano, touch
+- Read: cat, less, head, tail, tee
+- Write: echo, nano, touch, vi, vim.
