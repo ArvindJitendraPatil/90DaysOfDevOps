@@ -30,8 +30,6 @@
 - Identify the owner and group columns
 - Check who owns your files
 
-![snapshot](images/ls_permission.png)
-
 * Owner : The owner is usually the user who created the file or directory. Owner can change permission of file.
 * Group : The group is a collection of users who share access to the file.
 
@@ -42,8 +40,6 @@
 - Change owner to berlin
 - Verify the changes
 
-![snapshot](images/chown_berlin.png)
-
 ## Basic chgrp Operations 
 
 - Create file team-notes.txt
@@ -51,8 +47,6 @@
 - Create group: sudo groupadd heist-team
 - Change file group to heist-team
 - Verify the change
-
-![snapshot](images/heist_grp.png)
 
 ## Combined Owner & Group Change
 
@@ -62,8 +56,6 @@ Using chown you can change both owner and group together:
 - Change owner to professor AND group to heist-team (one command)
 - Create directory app-logs/
 - Change its owner to berlin and group to heist-team
-
-![snapshot](images/owner_grp.png)
 
 ## Recursive Ownership
 
@@ -84,8 +76,6 @@ Using chown you can change both owner and group together:
 
 4. Verify all files and subdirectories changed: `ls -lR heist-project/`
 
-![snapshot](images/recursive.png)
-
 ### Task 6: Practice Challenge
 
 1. Create users: `tokyo`, `berlin`, `nairobi` (if not already created)
@@ -104,8 +94,6 @@ Using chown you can change both owner and group together:
    - `escape-plan.txt` → owner: `nairobi`, group: `vault-team`
 
 **Verify:** `ls -l bank-heist/`
-
-![snapshot](images/task6.png)
 
 ## Commands Used
 
