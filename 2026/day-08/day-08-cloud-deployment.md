@@ -1,60 +1,66 @@
 
-Step 1: Launch EC2 Instance
-1. Open AWS Console → EC2 → Launch Instance
-2. Select Ubuntu Server 22.04 LTS
-3. Select t2.micro (Free Tier)
-4. Create or select key pair
-5. Allow ports: SSH (22) and HTTP (80)
-6. Launch instance
-Step 2: Connect via SSH
-chmod 400 your-key.pem
-ssh -i your-key.pem ubuntu@YOUR_PUBLIC_IP
-Step 3: Install Docker
-sudo apt update
-sudo apt install docker.io -y
-sudo systemctl start docker
-sudo systemctl enable docker
-sudo usermod -aG docker ubuntu
-newgrp docker
-Step 4: Create Project Folder
-mkdir my-nginx-site
-cd my-nginx-site
-Step 5: Create HTML File using vi
-vi index.html
-Press i to enter insert mode and paste:
-<!DOCTYPE html>
-<html>
-<head>
-<title>Docker Nginx EC2</title>
-</head>
-<body>
-<h1>Success! Docker Nginx running on EC2</h1>
-<p>This page is served from Docker container.</p>
-</body>
-</html>
-Save and exit vi:
-Press ESC
-Type :wq
-Press Enter
-Step 6: Create Dockerfile using vi
-vi Dockerfile
-Paste this Dockerfile:
-FROM nginx:latest
-COPY index.html /usr/share/nginx/html/index.html
-Save and exit vi:
-Press ESC
-Type :wq
-Press Enter
-Step 7: Build Docker Image
-docker build -t my-nginx .
-Step 8: Run Docker Container
-docker run -d -p 80:80 --name nginx-container my-nginx
-Step 9: Verify Running Container
-docker ps
-Step 10: Access Website
-Open browser and go to:
-http://YOUR_PUBLIC_IP
-Step 11: Save Logs to nginx-logs.txt
-docker logs nginx-container > nginx-logs.txt
-Step 12: View Logs using vi
-vi nginx-logs.txt
+# Deploy a Real Web Server on the Cloud
+
+Step 1 : Launch an instance from AWS console.
+
+Step 2 : Connect to instance using ssh.
+    
+Command : `ssh -i "Ram.pem" ubuntu@ec2-13-208-229-39.ap-northeast-3.compute.amazonaws.com`
+
+Step 3 : Install Nginx
+
+Command : `sudo apt update`
+
+`sudo apt install nginx`
+        
+Step 3 : Configure security groups for web access.
+    From the AWS console, go to the security group and add an inbound rule for port 80 (default for Nginx).
+
+<img width="985" height="347" alt="image" src="https://github.com/user-attachments/assets/ea748170-3e68-41cf-9fa3-183bb983969d" />
+
+
+Step 4 : Check logs of nginx service
+
+Command : `journalctl -u nginx`
+
+Step 5 : Save logs to file
+
+Commad : `scp -i "Ram.pem" ubuntu@ec2-13-208-229-39.ap-northeast-3.compute.amazonaws.com:/var/log/nginx/access.log .`
+- cat /var/log/nginx/access.log
+    
+`scp -i "Ram.pem" ubuntu@ec2-13-208-229-39.ap-northeast-3.compute.amazonaws.com:~/journalctl.log .`
+
+- cat /home/ubuntu/journalctl.log
+    
+## Install Docker
+
+Command `sudo apt install docker.io`
+    
+# Challenges Faced
+
+* Unable to access Nginx using the public IP.
+
+ Solution: I had forgotten to add port 80 to the security group inbound rules. Once added, Nginx became accessible.
+
+* My custom HTML page was not loading on the webpage.
+
+ Solution: I reloaded the Nginx service. After reloading, my aboutme.html page was accessible.
+
+* File permissions issue when accessing logs.
+
+ Solution : Needed sudo to read /var/log/nginx/access.log.
+
+
+# What I Learned
+
+* Connect to an AWS cloud instance using SSH.
+
+* How to manage security group (adding inbound rules)
+
+* How to install Nginx and serve a webpage.
+
+* The importance of reloading a service after configuration changes or adding new files.
+
+* How to transfer files securely from the instance to the local machine using scp.
+
+* Confusion between journalctl and access logs. Learned that journalctl -u nginx shows service logs, while HTTP requests are recorded in /var/log/nginx/access.log.
