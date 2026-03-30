@@ -16,17 +16,17 @@ Ops run the product (focus on stability).
 - Examples: Google Drive, AWS, Microsoft Azure.
 
 # Why I started learning DevOps & Cloud?
-Because manual work is boring, automation is smart and the future lives in the cloud like aws,azure,gcp.
+- Because manual work is boring, automation is smart and the future lives in the cloud like aws,azure,gcp.
 
 # Where I want to reach?
-My goal is to become a pro DevOps engineer and help others to learn DevOps.
+- My goal is to become a pro DevOps engineer and help others to learn DevOps.
 
 # How I’ll stay consistent every day?
-Beacause my salary motivate me everyday.
+- Beacause my salary motivate me everyday.
 
 # Hello Team,
-* 1) My name is arvind. I am working as system engineer in the infosys since 3.5 years.
-* 2) my goals : learn the troubleshooting part of linux, How cicd pipeline is work , How to deploy 3 tier applications in kubernetes.
-* 3) Jenkins, Ansible, AWS, Docker
-* 4) I will give devops 4-6 hours in weekends.
+* My name is arvind. I am working as system engineer in the infosys since 3.5 years.
+* My goals : learn the troubleshooting part of linux, How cicd pipeline is work, How to deploy 3 tier applications in kubernetes.
+* Jenkins, Ansible, AWS, Docker.
+* I will give devops 4-6 hours in weekends.
 
