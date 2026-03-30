@@ -25,8 +25,8 @@ Ops run the product (focus on stability).
 - Beacause my salary motivate me everyday.
 
 # Hello Team,
-* My name is arvind. I am working as system engineer in the infosys since 3.5 years.
+* My name is arvind. I am working as System Engineer in the infosys since 3.5 years.
 * My goals : learn the troubleshooting part of linux, How cicd pipeline is work, How to deploy 3 tier applications in kubernetes.
 * Jenkins, Ansible, AWS, Docker.
-* I will give devops 4-6 hours in weekends.
+* I will give time for devops 8-10 hours in weekends.
 
