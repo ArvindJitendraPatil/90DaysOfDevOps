@@ -1,5 +1,10 @@
+# Shell :
+- shell is a command line interpreter that allows users to interact with the linux os.
+- EX. shell - bash,sh,zsh,ksh.
+
 # Shell Scripting :
 - shell scripting is a collection of shell commands send to kernal and they work.
+- all the commands execute sequentially.
 
 # Shebag : 
 - Shebag is used for scrpit feature run the shell scripts. feacture like sh,bash,csh,zsh.
@@ -84,7 +89,7 @@
 - ubuntu@ip-172-31-40-21:~$ cat server_check.sh
 - #!/bin/bash
 - read -p "Enter the service name :" service_name
-- read -p "Do you want to check the $service_name istatus? (y/n)" ans
+- read -p "Do you want to check the $service_name status? (y/n)" ans
 - if [ "$ans" = "y" ]; then
 - if sudo systemctl status "$service_name"; then
     echo "$service_name is ACTIVE"
