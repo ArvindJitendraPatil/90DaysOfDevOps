@@ -37,45 +37,20 @@
    - Checks if each package is installed (use `dpkg -s` or `rpm -q`)
    - Installs it if missing, skips if already present
    - Prints status for each package
+<img width="700" height="705" alt="image" src="https://github.com/user-attachments/assets/1f4edccd-a7a4-4869-b07c-bdb7cf028687" />
 
-#!/bin/bash
+## Task 5: Error handling
 
-package=("nginx" "curl" "wget")
+1. Create `safe_script.sh` that:
+   - Uses `set -e` at the top (exit on error)
+   - Tries to create a directory `/tmp/devops-test`
+   - Tries to navigate into it
+   - Creates a file inside
+   - Uses `||` operator to print an error if any step fails
+<img width="700" height="870" alt="image" src="https://github.com/user-attachments/assets/34df5293-9a2e-4312-90f4-8d4de3c56b71" />
 
-
-for pkg in "${package[@]}";do
-	dpkg -s $pkg &>/dev/null || { echo "$pkg installing..."; apt install $pkg -y 1>/dev/null; }
-done
-
-for pkg in "${package[@]}";do
-	 dpkg -s $pkg &>/dev/null && echo " STATUS - $pkg is INSTALLED " || echo " STATUS - $pkg is NOT INSTALLED "
-done
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+2. Modify your `install_packages.sh` to check if the script is being run as root — exit with a message if not.
+<img width="700" height="647" alt="image" src="https://github.com/user-attachments/assets/dfbe3dbd-cdc3-4ae0-9929-f928be6861cb" />
 
 ## What I learned
 
