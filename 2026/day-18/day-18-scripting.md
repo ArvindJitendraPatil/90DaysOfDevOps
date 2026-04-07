@@ -7,8 +7,10 @@
    - A function `add` that takes two numbers and prints their sum
    - Call both functions from the script
    
-   [Here is the script functions.sh](scripts/functions.sh)
+[Here is the script functions.sh](scripts/functions.sh)
+   
   ![snapshot](images/function.sh.png)
+  
 ---
 
 ## Task 2: Functions with Return Values
@@ -17,8 +19,10 @@
    - A function `check_memory` that checks free memory using `free -h`
    - A main section that calls both and prints the results
    
-   [Here is the script disk_check.sh](scripts/disk_check.sh)
+[Here is the script disk_check.sh](scripts/disk_check.sh)
+   
    ![snapshot](images/disk.sh.png)
+   
 ---
 
 ## Task 3: Strict Mode — `set -euo pipefail`
@@ -32,8 +36,9 @@
 - `set -u` → It throws unbound variable error and exits the script.
 - `set -o pipefail` → Makes pipeline fail if any command fails.
 
-    [Here is the script strict_demo.sh](scripts/strict_demo.sh)
-     ![snapshot](images/strict_demo.sh.png)
+[Here is the script strict_demo.sh](scripts/strict_demo.sh)
+
+   ![snapshot](images/strict_demo.sh.png)
    
 ---
 
@@ -43,7 +48,8 @@
    - Show that `local` variables don't leak outside the function
    - Compare with a function that uses regular variables
    
-   [Here is the script local_demo.sh](scripts/local_demo.sh)
+[Here is the script local_demo.sh](scripts/local_demo.sh)
+   
    ![snapshot](images/local.sh.png)
 
 ---
@@ -58,6 +64,8 @@ Create `system_info.sh` that uses functions for everything:
 6. A `main` function that calls all of the above with section headers
 7. Use `set -euo pipefail` at the top
 
-    [Here is the script system_info.sh](scripts/system_info.sh)
+[Here is the script system_info.sh](scripts/system_info.sh)
+   
    ![snapshot](images/system_info.sh.png)
+   
 ---
