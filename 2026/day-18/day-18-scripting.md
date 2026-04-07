@@ -8,7 +8,7 @@
    - Call both functions from the script
    
    [Here is the script functions.sh](scripts/functions.sh)
-
+  ![snapshot](images/function.sh.png)
 ---
 
 ## Task 2: Functions with Return Values
@@ -18,8 +18,7 @@
    - A main section that calls both and prints the results
    
    [Here is the script disk_check.sh](scripts/disk_check.sh)
-   
-
+   ![snapshot](images/disk.sh.png)
 ---
 
 ## Task 3: Strict Mode — `set -euo pipefail`
@@ -34,7 +33,7 @@
 - `set -o pipefail` → Makes pipeline fail if any command fails.
 
     [Here is the script strict_demo.sh](scripts/strict_demo.sh)
-  
+     ![snapshot](images/strict_demo.sh.png)
    
 ---
 
@@ -45,7 +44,7 @@
    - Compare with a function that uses regular variables
    
    [Here is the script local_demo.sh](scripts/local_demo.sh)
-   
+   ![snapshot](images/local.sh.png)
 
 ---
 
@@ -60,5 +59,5 @@ Create `system_info.sh` that uses functions for everything:
 7. Use `set -euo pipefail` at the top
 
     [Here is the script system_info.sh](scripts/system_info.sh)
-   
+   ![snapshot](images/system_info.sh.png)
 ---
