@@ -1,0 +1,730 @@
+Date Of Analysis : 2026-04-08 Time : 00:43
+Name Of Log File : app.log
+
+==========TOTAL LINES PROCESSED==========
+999
+==========TOTAL ERROR COUNT==========
+424
+
+==========TOP 5 ERROR MESSAGES==========
+     98    ERROR [/10.10.34.11:3888:QuorumCnxManager$Listener@493] - Received connection request 
+     47    ERROR [/10.10.34.12:3888:QuorumCnxManager$Listener@493] - Received connection request 
+     37    ERROR [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:FastLeaderElection@774] - Notification time out: 
+     17    ERROR [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@839] - Client attempting to establish new session at 
+     13    ERROR [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxnFactory@197] - Accepted socket connection from 
+
+==========CRITICAL MESSAGES==========
+3:2015-07-29 19:04:29,071 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+4:2015-07-29 19:04:29,079 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+5:2015-07-29 19:13:17,524 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+6:2015-07-29 19:13:24,282 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 1, error = 
+8:2015-07-29 19:13:27,721 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 1, error = 
+9:2015-07-29 19:13:34,382 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+10:2015-07-29 19:13:37,626 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+11:2015-07-29 19:13:44,301 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+12:2015-07-29 19:13:47,731 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 1, error = 
+14:2015-07-29 19:13:54,399 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 1, error = 
+15:2015-07-29 19:14:04,406 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+16:2015-07-29 19:14:07,559 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+17:2015-07-29 19:14:07,653 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+18:2015-07-29 19:14:24,329 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+19:2015-07-29 19:14:37,585 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+21:2015-07-29 19:14:47,593 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+22:2015-07-29 19:14:54,354 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+23:2015-07-29 19:15:24,476 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+24:2015-07-29 19:15:37,647 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+25:2015-07-29 19:15:37,648 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+26:2015-07-29 19:15:54,407 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+28:2015-07-29 19:16:04,412 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+29:2015-07-29 19:16:04,414 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+30:2015-07-29 19:16:07,659 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+31:2015-07-29 19:16:14,520 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+32:2015-07-29 19:16:24,348 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 1, error = 
+33:2015-07-29 19:16:27,865 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+34:2015-07-29 19:16:27,865 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+35:2015-07-29 19:16:34,433 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 1, error = 
+37:2015-07-29 19:16:57,707 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+38:2015-07-29 19:17:17,721 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+39:2015-07-29 19:17:17,921 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+40:2015-07-29 19:17:24,471 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 1, error = 
+41:2015-07-29 19:17:24,477 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+42:2015-07-29 19:17:57,741 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+44:2015-07-29 19:17:57,955 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+45:2015-07-29 19:18:04,430 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+46:2015-07-29 19:18:07,748 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+47:2015-07-29 19:18:07,756 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+49:2015-07-29 19:18:14,839 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+50:2015-07-29 19:18:34,635 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+51:2015-07-29 19:18:37,770 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+52:2015-07-29 19:18:47,785 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+53:2015-07-29 19:18:54,534 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+54:2015-07-29 19:18:54,534 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+55:2015-07-29 19:18:57,988 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+58:2015-07-29 19:21:36,607 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+59:2015-07-29 19:21:39,846 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 1, error = 
+60:2015-07-29 19:21:39,846 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+61:2015-07-29 19:21:43,389 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+62:2015-07-29 19:21:46,525 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 1, error = 
+63:2015-07-29 19:21:46,537 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+66:2015-07-29 19:21:53,209 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+67:2015-07-29 19:21:53,220 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+68:2015-07-29 19:21:53,410 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+69:2015-07-29 19:21:53,412 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+70:2015-07-29 19:21:53,414 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+71:2015-07-29 19:21:56,644 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+72:2015-07-29 19:21:56,756 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+73:2015-07-29 19:21:59,997 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+75:2015-07-29 19:22:03,337 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+76:2015-07-29 19:22:03,439 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+77:2015-07-29 19:22:10,020 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 1, error = 
+78:2015-07-29 19:22:13,256 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+79:2015-07-29 19:22:13,257 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+80:2015-07-29 19:22:16,799 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+82:2015-07-29 19:22:23,289 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+83:2015-07-29 19:22:23,378 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+84:2015-07-29 19:22:23,379 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+86:2015-07-29 19:22:26,618 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+87:2015-07-29 19:22:26,634 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+88:2015-07-29 19:22:26,734 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+89:2015-07-29 19:22:26,829 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+91:2015-07-29 19:22:29,975 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+92:2015-07-29 19:22:33,313 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 1, error = 
+93:2015-07-29 19:22:33,513 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+94:2015-07-29 19:22:36,642 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+96:2015-07-29 19:22:36,659 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+98:2015-07-29 19:22:43,421 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+99:2015-07-29 19:22:43,536 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 1, error = 
+100:2015-07-29 19:22:46,680 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+101:2015-07-29 19:22:50,025 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+102:2015-07-29 19:22:53,441 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+103:2015-07-29 19:22:53,462 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 1, error = 
+104:2015-07-29 19:22:56,689 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+105:2015-07-29 19:22:56,892 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 1, error = 
+106:2015-07-29 19:23:00,124 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 1, error = 
+107:2015-07-29 19:23:00,131 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+109:2015-07-29 19:23:03,387 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+110:2015-07-29 19:23:03,464 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+111:2015-07-29 19:23:03,590 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+112:2015-07-29 19:23:06,729 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+113:2015-07-29 19:23:13,491 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+114:2015-07-29 19:23:13,596 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 1, error = 
+115:2015-07-29 19:23:16,755 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+117:2015-07-29 19:23:16,937 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+119:2015-07-29 19:23:20,095 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+120:2015-07-29 19:23:20,173 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+121:2015-07-29 19:23:20,278 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+122:2015-07-29 19:23:23,518 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+123:2015-07-29 19:23:26,760 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 1, error = 
+124:2015-07-29 19:23:26,979 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 1, error = 
+126:2015-07-29 19:23:30,116 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+127:2015-07-29 19:23:30,320 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+128:2015-07-29 19:23:33,457 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 1, error = 
+129:2015-07-29 19:23:33,553 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+130:2015-07-29 19:23:36,783 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 1, error = 
+131:2015-07-29 19:23:40,140 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+133:2015-07-29 19:23:46,830 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+134:2015-07-29 19:23:46,917 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+135:2015-07-29 19:23:50,171 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 1, error = 
+137:2015-07-29 19:23:56,838 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+138:2015-07-29 19:23:56,851 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+139:2015-07-29 19:24:00,386 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 1, error = 
+140:2015-07-29 19:24:03,616 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+141:2015-07-29 19:24:03,725 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+142:2015-07-29 19:24:07,062 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+143:2015-07-29 19:24:10,216 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+145:2015-07-29 19:24:13,542 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+147:2015-07-29 19:24:16,883 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+148:2015-07-29 19:24:16,987 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+149:2015-07-29 19:24:20,217 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+150:2015-07-29 19:24:20,413 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+151:2015-07-29 19:24:20,431 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+153:2015-07-29 19:24:23,574 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 1, error = 
+154:2015-07-29 19:24:23,578 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+155:2015-07-29 19:24:30,451 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+156:2015-07-29 19:24:36,927 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 1, error = 
+157:2015-07-29 19:24:37,012 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+158:2015-07-29 19:24:40,383 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 1, error = 
+159:2015-07-29 19:24:43,814 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 1, error = 
+160:2015-07-29 19:24:50,301 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+161:2015-07-29 19:24:50,374 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+162:2015-07-29 19:24:57,160 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 1, error = 
+163:2015-07-29 19:24:57,175 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 1, error = 
+164:2015-07-29 19:25:03,663 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+165:2015-07-29 19:25:03,744 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+167:2015-07-29 19:25:07,003 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+168:2015-07-29 19:25:07,079 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+169:2015-07-29 19:25:07,102 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+172:2015-07-29 19:25:10,539 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+173:2015-07-29 19:25:13,695 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+174:2015-07-29 19:25:13,874 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+175:2015-07-29 19:25:17,021 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+176:2015-07-29 19:25:17,124 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+177:2015-07-29 19:25:23,702 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+178:2015-07-29 19:25:23,811 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 1, error = 
+180:2015-07-29 19:25:27,058 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 1, error = 
+181:2015-07-29 19:25:27,242 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+183:2015-07-29 19:25:30,571 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+184:2015-07-29 19:25:33,833 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 1, error = 
+185:2015-07-29 19:25:33,923 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 1, error = 
+187:2015-07-29 19:25:37,065 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 1, error = 
+189:2015-07-29 19:25:37,259 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+191:2015-07-29 19:25:40,600 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+192:2015-07-29 19:25:43,751 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+193:2015-07-29 19:25:47,102 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+194:2015-07-29 19:25:47,195 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+195:2015-07-29 19:25:50,507 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+196:2015-07-29 19:25:50,537 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+197:2015-07-29 19:25:50,615 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+199:2015-07-29 19:27:58,407 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+202:2015-07-29 19:28:05,197 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 1, error = 
+205:2015-07-29 19:28:12,190 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+206:2015-07-29 19:28:15,221 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+207:2015-07-29 19:28:18,656 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+208:2015-07-29 19:28:18,661 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+209:2015-07-29 19:28:21,796 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+210:2015-07-29 19:28:21,902 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 1, error = 
+211:2015-07-29 19:28:21,902 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+212:2015-07-29 19:28:22,000 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 1, error = 
+214:2015-07-29 19:28:31,823 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 1, error = 
+216:2015-07-29 19:28:35,160 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+219:2015-07-29 19:28:38,704 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+220:2015-07-29 19:28:41,841 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+222:2015-07-29 19:28:42,254 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 1, error = 
+224:2015-07-29 19:28:55,309 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+227:2015-07-29 19:29:08,571 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+229:2015-07-29 19:29:08,669 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+230:2015-07-29 19:29:08,670 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+231:2015-07-29 19:29:08,671 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+232:2015-07-29 19:29:12,009 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+233:2015-07-29 19:29:12,115 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+234:2015-07-29 19:29:12,115 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+235:2015-07-29 19:29:12,116 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+236:2015-07-29 19:29:15,349 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+237:2015-07-29 19:29:15,349 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+238:2015-07-29 19:29:15,353 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+239:2015-07-29 19:29:18,798 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+240:2015-07-29 19:29:21,933 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+241:2015-07-29 19:29:22,033 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+242:2015-07-29 19:29:22,136 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+243:2015-07-29 19:29:22,340 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+244:2015-07-29 19:29:25,274 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+245:2015-07-29 19:29:28,612 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+246:2015-07-29 19:29:28,820 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+247:2015-07-29 19:29:29,020 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 1, error = 
+248:2015-07-29 19:29:32,056 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+250:2015-07-29 19:29:38,840 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+251:2015-07-29 19:29:38,841 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+252:2015-07-29 19:29:38,843 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+253:2015-07-29 19:29:42,070 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+254:2015-07-29 19:29:42,075 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 1, error = 
+255:2015-07-29 19:29:45,414 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+256:2015-07-29 19:29:45,522 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+257:2015-07-29 19:29:52,202 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 1, error = 
+258:2015-07-29 19:29:55,545 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+259:2015-07-29 19:29:58,673 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+260:2015-07-29 19:29:58,774 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+261:2015-07-29 19:29:58,778 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 1, error = 
+262:2015-07-29 19:29:58,779 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+263:2015-07-29 19:29:58,884 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+266:2015-07-29 19:30:05,458 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+267:2015-07-29 19:30:08,802 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 1, error = 
+268:2015-07-29 19:30:12,246 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+269:2015-07-29 19:30:15,382 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+271:2015-07-29 19:30:18,723 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 1, error = 
+272:2015-07-29 19:30:22,162 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+273:2015-07-29 19:30:25,405 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+274:2015-07-29 19:30:25,608 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 1, error = 
+275:2015-07-29 19:30:25,608 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+276:2015-07-29 19:30:25,609 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+277:2015-07-29 19:30:35,630 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+278:2015-07-29 19:30:38,760 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+280:2015-07-29 19:30:42,315 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+281:2015-07-29 19:30:42,315 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+282:2015-07-29 19:30:45,653 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+283:2015-07-29 19:30:48,785 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+284:2015-07-29 19:30:48,883 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 1, error = 
+285:2015-07-29 19:30:48,997 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+286:2015-07-29 19:30:59,011 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 1, error = 
+287:2015-07-29 19:31:02,142 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 1, error = 
+288:2015-07-29 19:31:02,243 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+289:2015-07-29 19:31:02,243 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+290:2015-07-29 19:31:02,352 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+291:2015-07-29 19:31:02,353 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+292:2015-07-29 19:31:05,483 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 1, error = 
+293:2015-07-29 19:31:05,583 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+294:2015-07-29 19:31:08,823 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+296:2015-07-29 19:31:15,504 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+297:2015-07-29 19:31:32,214 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+298:2015-07-29 19:31:32,214 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+299:2015-07-29 19:31:32,420 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+300:2015-07-29 19:31:35,546 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 1, error = 
+301:2015-07-29 19:31:35,760 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+302:2015-07-29 19:31:39,093 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 1, error = 
+304:2015-07-29 19:31:45,780 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+305:2015-07-29 19:31:49,006 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+306:2015-07-29 19:31:49,116 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+307:2015-07-29 19:31:49,117 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+308:2015-07-29 19:31:52,349 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 1, error = 
+309:2015-07-29 19:31:52,456 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 1, error = 
+310:2015-07-29 19:31:52,456 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+311:2015-07-29 19:31:55,588 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+313:2015-07-29 19:31:55,592 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 1, error = 
+315:2015-07-29 19:31:55,805 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+316:2015-07-29 19:31:58,932 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 1, error = 
+317:2015-07-29 19:31:59,141 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+318:2015-07-29 19:32:02,269 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+319:2015-07-29 19:32:02,363 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+320:2015-07-29 19:32:02,367 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+321:2015-07-29 19:32:05,705 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+322:2015-07-29 19:32:08,955 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+323:2015-07-29 19:32:09,163 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 1, error = 
+324:2015-07-29 19:32:12,495 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+326:2015-07-29 19:32:15,845 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+327:2015-07-29 19:32:18,976 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+328:2015-07-29 19:32:22,405 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 1, error = 
+329:2015-07-29 19:32:22,525 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 1, error = 
+330:2015-07-29 19:32:25,653 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+331:2015-07-29 19:32:25,748 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 1, error = 
+333:2015-07-29 19:32:29,085 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+334:2015-07-29 19:32:32,336 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+335:2015-07-29 19:32:32,428 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+336:2015-07-29 19:32:35,678 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 1, error = 
+338:2015-07-29 19:32:39,216 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 1, error = 
+339:2015-07-29 19:32:42,355 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+340:2015-07-29 19:32:42,357 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+341:2015-07-29 19:32:42,443 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+342:2015-07-29 19:32:42,557 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+343:2015-07-29 19:32:49,036 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+345:2015-07-29 19:32:49,237 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 1, error = 
+346:2015-07-29 19:32:52,469 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 1, error = 
+348:2015-07-29 19:33:02,398 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+350:2015-07-29 19:33:02,597 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+351:2015-07-29 19:33:05,829 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 1, error = 
+352:2015-07-29 19:33:09,080 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 1, error = 
+353:2015-07-29 19:33:09,170 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+355:2015-07-29 19:33:12,618 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+356:2015-07-29 19:33:12,627 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+358:2015-07-29 19:33:13,728 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+359:2015-07-29 19:33:15,851 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 1, error = 
+360:2015-07-29 19:33:15,853 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+361:2015-07-29 19:33:15,963 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 1, error = 
+363:2015-07-29 19:33:19,190 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+364:2015-07-29 19:33:19,298 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+366:2015-07-29 19:33:22,441 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+368:2015-07-29 19:33:23,749 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 1, error = 
+369:2015-07-29 19:33:25,872 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+370:2015-07-29 19:33:25,873 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+372:2015-07-29 19:33:29,118 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 1, error = 
+373:2015-07-29 19:33:29,212 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+375:2015-07-29 19:33:29,326 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+376:2015-07-29 19:33:32,459 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+377:2015-07-29 19:33:32,552 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 1, error = 
+378:2015-07-29 19:33:35,800 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+379:2015-07-29 19:33:35,894 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 1, error = 
+380:2015-07-29 19:33:39,140 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+381:2015-07-29 19:33:39,344 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+382:2015-07-29 19:33:42,574 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+384:2015-07-29 19:33:42,678 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 1, error = 
+385:2015-07-29 19:33:42,688 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+386:2015-07-29 19:33:45,916 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+387:2015-07-29 19:33:46,025 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+388:2015-07-29 19:33:46,026 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+389:2015-07-29 19:33:49,162 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+391:2015-07-29 19:33:52,594 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+393:2015-07-29 19:33:55,843 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+394:2015-07-29 19:33:55,844 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+395:2015-07-29 19:33:55,935 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+396:2015-07-29 19:33:59,385 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+397:2015-07-29 19:34:02,725 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+398:2015-07-29 19:34:05,861 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 1, error = 
+400:2015-07-29 19:34:05,863 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 1, error = 
+402:2015-07-29 19:34:05,958 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 1, error = 
+403:2015-07-29 19:34:06,067 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+404:2015-07-29 19:34:09,294 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+405:2015-07-29 19:34:09,294 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 1, error = 
+406:2015-07-29 19:34:09,295 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 1, error = 
+407:2015-07-29 19:34:12,634 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+408:2015-07-29 19:34:12,742 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+410:2015-07-29 19:34:12,747 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+411:2015-07-29 19:34:15,884 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+412:2015-07-29 19:34:15,884 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+413:2015-07-29 19:34:16,089 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+414:2015-07-29 19:34:26,102 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+415:2015-07-29 19:34:29,246 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+416:2015-07-29 19:34:29,447 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 1, error = 
+418:2015-07-29 19:34:32,782 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+420:2015-07-29 19:34:39,358 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 1, error = 
+421:2015-07-29 19:34:42,809 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+422:2015-07-29 19:34:46,038 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+423:2015-07-29 19:34:46,038 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+424:2015-07-29 19:34:49,487 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+427:2015-07-29 19:35:02,651 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 1, error = 
+428:2015-07-29 19:35:02,846 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+429:2015-07-29 19:35:05,992 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+430:2015-07-29 19:35:06,078 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+431:2015-07-29 19:35:09,326 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 1, error = 
+433:2015-07-29 19:35:16,098 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+434:2015-07-29 19:35:16,207 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+435:2015-07-29 19:35:19,443 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 1, error = 
+437:2015-07-29 19:35:22,888 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 1, error = 
+438:2015-07-29 19:35:29,368 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+439:2015-07-29 19:35:29,372 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+440:2015-07-29 19:35:29,458 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+441:2015-07-29 19:35:36,142 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 1, error = 
+444:2015-07-29 19:35:49,417 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+445:2015-07-29 19:35:49,417 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+447:2015-07-29 19:35:52,756 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 1, error = 
+448:2015-07-29 19:35:52,842 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+449:2015-07-29 19:35:56,178 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+450:2015-07-29 19:35:56,180 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+452:2015-07-29 19:36:06,119 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+453:2015-07-29 19:36:09,456 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+454:2015-07-29 19:36:09,645 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+455:2015-07-29 19:36:16,136 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+456:2015-07-29 19:36:16,221 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+457:2015-07-29 19:36:16,331 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+458:2015-07-29 19:36:16,334 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+459:2015-07-29 19:36:19,480 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+460:2015-07-29 19:36:22,816 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 1, error = 
+461:2015-07-29 19:36:22,901 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+462:2015-07-29 19:36:22,902 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 1, error = 
+463:2015-07-29 19:36:26,155 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+464:2015-07-29 19:36:26,156 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+465:2015-07-29 19:36:26,157 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+467:2015-07-29 19:36:29,686 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 1, error = 
+468:2015-07-29 19:36:32,920 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+469:2015-07-29 19:36:33,030 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 1, error = 
+471:2015-07-29 19:36:36,370 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+472:2015-07-29 19:36:39,516 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+473:2015-07-29 19:36:39,597 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+474:2015-07-29 19:36:42,859 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 1, error = 
+475:2015-07-29 19:36:42,939 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 1, error = 
+477:2015-07-29 19:36:43,054 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+478:2015-07-29 19:36:49,620 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+479:2015-07-29 19:36:49,623 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+482:2015-07-29 19:36:52,879 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 1, error = 
+484:2015-07-29 19:36:56,220 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+486:2015-07-29 19:36:56,303 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 1, error = 
+488:2015-07-29 19:37:02,901 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+489:2015-07-29 19:37:09,774 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 1, error = 
+490:2015-07-29 19:37:12,919 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+492:2015-07-29 19:37:13,114 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+493:2015-07-29 19:37:19,676 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+496:2015-07-29 19:52:05,118 - CRITICAL  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@349] - caught end of stream exception
+506:2015-07-29 23:44:28,903 - CRITICAL [CommitProcessor:1:NIOServerCnxn@180] - Unexpected Exception: 
+523:2015-07-30 16:12:01,554 - CRITICAL  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@793] - Connection request from old client /10.10.34.19:33442; will be dropped if server is in r-o mode
+527:2015-07-30 16:18:36,818 - CRITICAL  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@793] - Connection request from old client /10.10.34.20:56418; will be dropped if server is in r-o mode
+528:2015-07-30 16:18:38,680 - CRITICAL  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@793] - Connection request from old client /10.10.34.42:34164; will be dropped if server is in r-o mode
+530:2015-07-30 16:34:50,091 - CRITICAL  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@793] - Connection request from old client /10.10.34.11:54411; will be dropped if server is in r-o mode
+532:2015-07-30 16:44:36,930 - CRITICAL  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@793] - Connection request from old client /10.10.34.13:37454; will be dropped if server is in r-o mode
+536:2015-07-30 17:11:54,937 - CRITICAL  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@349] - caught end of stream exception
+538:2015-07-30 17:22:34,245 - CRITICAL  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@349] - caught end of stream exception
+541:2015-07-30 17:49:05,943 - CRITICAL  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@793] - Connection request from old client /10.10.34.12:45728; will be dropped if server is in r-o mode
+542:2015-07-30 17:55:26,200 - CRITICAL  [WorkerSender[myid=1]:QuorumCnxManager@368] - Cannot open channel to 2 at election address /10.10.34.12:3888
+546:2015-07-30 19:50:21,400 - CRITICAL  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@349] - caught end of stream exception
+548:2015-07-30 19:59:02,538 - CRITICAL  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@793] - Connection request from old client /10.10.34.13:38053; will be dropped if server is in r-o mode
+554:2015-07-30 20:17:12,294 - CRITICAL  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@349] - caught end of stream exception
+556:2015-07-30 20:35:02,324 - CRITICAL  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@793] - Connection request from old client /10.10.34.13:38079; will be dropped if server is in r-o mode
+557:2015-07-30 21:03:35,465 - CRITICAL  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@349] - caught end of stream exception
+559:2015-07-30 21:03:44,632 - CRITICAL  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@793] - Connection request from old client /10.10.34.11:40489; will be dropped if server is in r-o mode
+565:2015-07-30 23:43:22,414 - CRITICAL  [LearnerHandler-/10.10.34.12:35276:LearnerHandler@575] - ******* GOODBYE /10.10.34.12:35276 ********
+567:2015-07-30 23:44:01,784 - CRITICAL  [WorkerSender[myid=1]:QuorumCnxManager@368] - Cannot open channel to 2 at election address /10.10.34.12:3888
+568:2015-07-30 23:44:04,784 - CRITICAL  [WorkerSender[myid=1]:QuorumCnxManager@368] - Cannot open channel to 3 at election address /10.10.34.13:3888
+569:2015-07-30 23:44:58,183 - CRITICAL  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:QuorumCnxManager@368] - Cannot open channel to 2 at election address /10.10.34.12:3888
+570:2015-07-30 23:49:40,005 - CRITICAL  [RecvWorker:3:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+572:2015-07-31 00:02:57,202 - CRITICAL  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@793] - Connection request from old client /10.10.34.40:40996; will be dropped if server is in r-o mode
+574:2015-07-31 00:19:18,655 - CRITICAL  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@349] - caught end of stream exception
+575:2015-07-31 00:19:19,582 - CRITICAL  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@349] - caught end of stream exception
+576:2015-07-31 00:19:37,018 - CRITICAL  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@793] - Connection request from old client /10.10.34.16:39498; will be dropped if server is in r-o mode
+579:2015-07-31 11:01:57,854 - CRITICAL  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@793] - Connection request from old client /10.10.34.25:58975; will be dropped if server is in r-o mode
+580:2015-07-31 11:09:01,762 - CRITICAL  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@793] - Connection request from old client /10.10.34.33:39730; will be dropped if server is in r-o mode
+584:2015-07-31 15:33:29,640 - CRITICAL  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:QuorumCnxManager@368] - Cannot open channel to 2 at election address /10.10.34.12:3888
+592:2015-07-31 21:23:10,926 - CRITICAL  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@793] - Connection request from old client /10.10.34.13:39525; will be dropped if server is in r-o mode
+593:2015-07-31 21:23:12,897 - CRITICAL  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@793] - Connection request from old client /10.10.34.35:48971; will be dropped if server is in r-o mode
+594:2015-07-31 21:24:43,960 - CRITICAL  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@349] - caught end of stream exception
+601:2015-08-10 17:53:06,869 - CRITICAL  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@349] - caught end of stream exception
+603:2015-08-10 17:53:22,870 - CRITICAL  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@793] - Connection request from old client /10.10.34.16:40418; will be dropped if server is in r-o mode
+605:2015-08-10 18:12:24,076 - CRITICAL  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@349] - caught end of stream exception
+606:2015-08-10 18:12:24,375 - CRITICAL  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@349] - caught end of stream exception
+617:2015-08-10 18:25:39,907 - CRITICAL  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@349] - caught end of stream exception
+624:2015-08-20 17:14:11,414 - CRITICAL  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@354] - Exception causing close of session 0x0 due to java.io.IOException: ZooKeeperServer not running
+633:2015-08-20 19:33:02,860 - CRITICAL  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@349] - caught end of stream exception
+635:2015-08-21 15:55:04,347 - CRITICAL  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@793] - Connection request from old client /10.10.34.13:50545; will be dropped if server is in r-o mode
+639:2015-08-24 15:27:03,681 - CRITICAL  [WorkerSender[myid=1]:QuorumCnxManager@368] - Cannot open channel to 3 at election address /10.10.34.13:3888
+640:2015-08-24 15:29:13,641 - CRITICAL  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:QuorumCnxManager@368] - Cannot open channel to 3 at election address /10.10.34.13:3888
+642:2015-08-24 15:37:13,664 - CRITICAL  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:QuorumCnxManager@368] - Cannot open channel to 2 at election address /10.10.34.12:3888
+644:2015-08-24 15:55:13,717 - CRITICAL  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:QuorumCnxManager@368] - Cannot open channel to 2 at election address /10.10.34.12:3888
+645:2015-08-24 15:57:13,723 - CRITICAL  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:QuorumCnxManager@368] - Cannot open channel to 2 at election address /10.10.34.12:3888
+647:2015-08-24 16:03:13,740 - CRITICAL  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:QuorumCnxManager@368] - Cannot open channel to 2 at election address /10.10.34.12:3888
+649:2015-08-24 16:12:13,767 - CRITICAL  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:QuorumCnxManager@368] - Cannot open channel to 3 at election address /10.10.34.13:3888
+650:2015-08-24 16:37:13,837 - CRITICAL  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:QuorumCnxManager@368] - Cannot open channel to 2 at election address /10.10.34.12:3888
+651:2015-08-24 16:51:13,876 - CRITICAL  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:QuorumCnxManager@368] - Cannot open channel to 3 at election address /10.10.34.13:3888
+652:2015-08-24 17:29:13,977 - CRITICAL  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:QuorumCnxManager@368] - Cannot open channel to 3 at election address /10.10.34.13:3888
+653:2015-08-24 17:39:14,002 - CRITICAL  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:QuorumCnxManager@368] - Cannot open channel to 2 at election address /10.10.34.12:3888
+656:2015-08-24 18:28:14,133 - CRITICAL  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:QuorumCnxManager@368] - Cannot open channel to 2 at election address /10.10.34.12:3888
+657:2015-08-24 18:31:14,142 - CRITICAL  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:QuorumCnxManager@368] - Cannot open channel to 3 at election address /10.10.34.13:3888
+660:2015-08-24 18:51:14,196 - CRITICAL  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:QuorumCnxManager@368] - Cannot open channel to 2 at election address /10.10.34.12:3888
+661:2015-08-24 19:01:14,221 - CRITICAL  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:QuorumCnxManager@368] - Cannot open channel to 2 at election address /10.10.34.12:3888
+662:2015-08-24 19:05:14,230 - CRITICAL  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:QuorumCnxManager@368] - Cannot open channel to 2 at election address /10.10.34.12:3888
+663:2015-08-24 19:09:14,240 - CRITICAL  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:QuorumCnxManager@368] - Cannot open channel to 2 at election address /10.10.34.12:3888
+664:2015-08-24 19:19:14,265 - CRITICAL  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:QuorumCnxManager@368] - Cannot open channel to 3 at election address /10.10.34.13:3888
+665:2015-08-24 19:31:14,292 - CRITICAL  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:QuorumCnxManager@368] - Cannot open channel to 2 at election address /10.10.34.12:3888
+668:2015-08-24 20:01:14,364 - CRITICAL  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:QuorumCnxManager@368] - Cannot open channel to 2 at election address /10.10.34.12:3888
+669:2015-08-24 20:16:14,399 - CRITICAL  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:QuorumCnxManager@368] - Cannot open channel to 2 at election address /10.10.34.12:3888
+670:2015-08-24 20:56:14,493 - CRITICAL  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:QuorumCnxManager@368] - Cannot open channel to 2 at election address /10.10.34.12:3888
+671:2015-08-24 20:57:14,495 - CRITICAL  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:QuorumCnxManager@368] - Cannot open channel to 2 at election address /10.10.34.12:3888
+672:2015-08-24 21:07:14,519 - CRITICAL  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:QuorumCnxManager@368] - Cannot open channel to 3 at election address /10.10.34.13:3888
+674:2015-08-24 21:26:14,562 - CRITICAL  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:QuorumCnxManager@368] - Cannot open channel to 2 at election address /10.10.34.12:3888
+676:2015-08-24 22:08:14,659 - CRITICAL  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:QuorumCnxManager@368] - Cannot open channel to 3 at election address /10.10.34.13:3888
+678:2015-08-24 22:10:14,663 - CRITICAL  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:QuorumCnxManager@368] - Cannot open channel to 2 at election address /10.10.34.12:3888
+679:2015-08-24 22:16:14,677 - CRITICAL  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:QuorumCnxManager@368] - Cannot open channel to 3 at election address /10.10.34.13:3888
+680:2015-08-24 22:17:14,678 - CRITICAL  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:QuorumCnxManager@368] - Cannot open channel to 2 at election address /10.10.34.12:3888
+682:2015-08-24 22:32:14,713 - CRITICAL  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:QuorumCnxManager@368] - Cannot open channel to 3 at election address /10.10.34.13:3888
+683:2015-08-24 22:39:14,728 - CRITICAL  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:QuorumCnxManager@368] - Cannot open channel to 3 at election address /10.10.34.13:3888
+684:2015-08-24 22:42:14,733 - CRITICAL  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:QuorumCnxManager@368] - Cannot open channel to 2 at election address /10.10.34.12:3888
+685:2015-08-24 22:45:14,741 - CRITICAL  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:QuorumCnxManager@368] - Cannot open channel to 3 at election address /10.10.34.13:3888
+686:2015-08-24 22:48:14,746 - CRITICAL  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:QuorumCnxManager@368] - Cannot open channel to 2 at election address /10.10.34.12:3888
+688:2015-08-24 22:57:14,766 - CRITICAL  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:QuorumCnxManager@368] - Cannot open channel to 2 at election address /10.10.34.12:3888
+690:2015-08-24 23:09:14,792 - CRITICAL  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:QuorumCnxManager@368] - Cannot open channel to 3 at election address /10.10.34.13:3888
+693:2015-08-24 23:38:14,850 - CRITICAL  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:QuorumCnxManager@368] - Cannot open channel to 2 at election address /10.10.34.12:3888
+694:2015-08-24 23:58:14,891 - CRITICAL  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:QuorumCnxManager@368] - Cannot open channel to 2 at election address /10.10.34.12:3888
+695:2015-08-25 00:00:14,897 - CRITICAL  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:QuorumCnxManager@368] - Cannot open channel to 3 at election address /10.10.34.13:3888
+696:2015-08-25 00:14:14,924 - CRITICAL  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:QuorumCnxManager@368] - Cannot open channel to 2 at election address /10.10.34.12:3888
+698:2015-08-25 00:26:14,949 - CRITICAL  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:QuorumCnxManager@368] - Cannot open channel to 2 at election address /10.10.34.12:3888
+699:2015-08-25 00:28:14,953 - CRITICAL  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:QuorumCnxManager@368] - Cannot open channel to 2 at election address /10.10.34.12:3888
+701:2015-08-25 00:44:14,985 - CRITICAL  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:QuorumCnxManager@368] - Cannot open channel to 2 at election address /10.10.34.12:3888
+704:2015-08-25 01:47:15,116 - CRITICAL  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:QuorumCnxManager@368] - Cannot open channel to 3 at election address /10.10.34.13:3888
+705:2015-08-25 02:06:15,155 - CRITICAL  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:QuorumCnxManager@368] - Cannot open channel to 2 at election address /10.10.34.12:3888
+707:2015-08-25 02:36:15,217 - CRITICAL  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:QuorumCnxManager@368] - Cannot open channel to 3 at election address /10.10.34.13:3888
+708:2015-08-25 02:54:15,254 - CRITICAL  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:QuorumCnxManager@368] - Cannot open channel to 3 at election address /10.10.34.13:3888
+709:2015-08-25 02:56:15,258 - CRITICAL  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:QuorumCnxManager@368] - Cannot open channel to 3 at election address /10.10.34.13:3888
+710:2015-08-25 03:16:15,297 - CRITICAL  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:QuorumCnxManager@368] - Cannot open channel to 2 at election address /10.10.34.12:3888
+711:2015-08-25 03:28:15,323 - CRITICAL  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:QuorumCnxManager@368] - Cannot open channel to 3 at election address /10.10.34.13:3888
+713:2015-08-25 03:30:15,327 - CRITICAL  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:QuorumCnxManager@368] - Cannot open channel to 3 at election address /10.10.34.13:3888
+714:2015-08-25 03:33:15,333 - CRITICAL  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:QuorumCnxManager@368] - Cannot open channel to 3 at election address /10.10.34.13:3888
+715:2015-08-25 03:38:15,343 - CRITICAL  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:QuorumCnxManager@368] - Cannot open channel to 3 at election address /10.10.34.13:3888
+717:2015-08-25 04:10:15,407 - CRITICAL  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:QuorumCnxManager@368] - Cannot open channel to 2 at election address /10.10.34.12:3888
+719:2015-08-25 04:21:15,429 - CRITICAL  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:QuorumCnxManager@368] - Cannot open channel to 2 at election address /10.10.34.12:3888
+720:2015-08-25 04:28:15,443 - CRITICAL  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:QuorumCnxManager@368] - Cannot open channel to 2 at election address /10.10.34.12:3888
+721:2015-08-25 05:00:15,508 - CRITICAL  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:QuorumCnxManager@368] - Cannot open channel to 2 at election address /10.10.34.12:3888
+724:2015-08-25 05:46:15,601 - CRITICAL  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:QuorumCnxManager@368] - Cannot open channel to 3 at election address /10.10.34.13:3888
+725:2015-08-25 05:50:15,608 - CRITICAL  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:QuorumCnxManager@368] - Cannot open channel to 2 at election address /10.10.34.12:3888
+726:2015-08-25 05:58:15,624 - CRITICAL  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:QuorumCnxManager@368] - Cannot open channel to 2 at election address /10.10.34.12:3888
+728:2015-08-25 06:41:15,711 - CRITICAL  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:QuorumCnxManager@368] - Cannot open channel to 2 at election address /10.10.34.12:3888
+729:2015-08-25 06:58:15,745 - CRITICAL  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:QuorumCnxManager@368] - Cannot open channel to 3 at election address /10.10.34.13:3888
+730:2015-08-25 07:03:15,756 - CRITICAL  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:QuorumCnxManager@368] - Cannot open channel to 3 at election address /10.10.34.13:3888
+731:2015-08-25 07:04:15,757 - CRITICAL  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:QuorumCnxManager@368] - Cannot open channel to 2 at election address /10.10.34.12:3888
+733:2015-08-25 07:16:15,781 - CRITICAL  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:QuorumCnxManager@368] - Cannot open channel to 3 at election address /10.10.34.13:3888
+734:2015-08-25 07:27:15,803 - CRITICAL  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:QuorumCnxManager@368] - Cannot open channel to 3 at election address /10.10.34.13:3888
+735:2015-08-25 08:20:15,909 - CRITICAL  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:QuorumCnxManager@368] - Cannot open channel to 2 at election address /10.10.34.12:3888
+736:2015-08-25 08:21:15,911 - CRITICAL  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:QuorumCnxManager@368] - Cannot open channel to 2 at election address /10.10.34.12:3888
+737:2015-08-25 08:23:15,916 - CRITICAL  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:QuorumCnxManager@368] - Cannot open channel to 3 at election address /10.10.34.13:3888
+738:2015-08-25 08:28:15,925 - CRITICAL  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:QuorumCnxManager@368] - Cannot open channel to 2 at election address /10.10.34.12:3888
+741:2015-08-25 08:49:15,968 - CRITICAL  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:QuorumCnxManager@368] - Cannot open channel to 3 at election address /10.10.34.13:3888
+742:2015-08-25 09:09:16,008 - CRITICAL  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:QuorumCnxManager@368] - Cannot open channel to 3 at election address /10.10.34.13:3888
+743:2015-08-25 09:11:16,012 - CRITICAL  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:QuorumCnxManager@368] - Cannot open channel to 3 at election address /10.10.34.13:3888
+745:2015-08-25 09:19:16,027 - CRITICAL  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:QuorumCnxManager@368] - Cannot open channel to 2 at election address /10.10.34.12:3888
+746:2015-08-25 09:24:16,037 - CRITICAL  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:QuorumCnxManager@368] - Cannot open channel to 2 at election address /10.10.34.12:3888
+747:2015-08-25 10:13:16,137 - CRITICAL  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:QuorumCnxManager@368] - Cannot open channel to 3 at election address /10.10.34.13:3888
+748:2015-08-25 10:14:16,139 - CRITICAL  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:QuorumCnxManager@368] - Cannot open channel to 3 at election address /10.10.34.13:3888
+751:2015-08-25 11:03:16,237 - CRITICAL  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:QuorumCnxManager@368] - Cannot open channel to 3 at election address /10.10.34.13:3888
+752:2015-08-25 11:20:12,465 - CRITICAL  [RecvWorker:3:QuorumCnxManager$RecvWorker@762] - Connection broken for id 3, my id = 1, error = 
+753:2015-08-25 11:21:22,561 - CRITICAL  [WorkerSender[myid=1]:QuorumCnxManager@368] - Cannot open channel to 3 at election address /10.10.34.13:3888
+755:2015-07-29 19:03:35,413 - CRITICAL [LearnerHandler-/10.10.34.11:52225:LearnerHandler@562] - Unexpected exception causing shutdown while sock still open
+756:2015-07-29 19:03:54,584 - CRITICAL [LearnerHandler-/10.10.34.11:52241:LearnerHandler@562] - Unexpected exception causing shutdown while sock still open
+757:2015-07-29 19:04:30,989 - CRITICAL  [LearnerHandler-/10.10.34.11:52264:LearnerHandler@575] - ******* GOODBYE /10.10.34.11:52264 ********
+758:2015-07-29 19:04:30,989 - CRITICAL [LearnerHandler-/10.10.34.11:52265:LearnerHandler@562] - Unexpected exception causing shutdown while sock still open
+759:2015-07-29 19:04:40,999 - CRITICAL [LearnerHandler-/10.10.34.11:52273:LearnerHandler@562] - Unexpected exception causing shutdown while sock still open
+760:2015-07-29 19:13:46,128 - CRITICAL  [LearnerHandler-/10.10.34.11:52308:LearnerHandler@575] - ******* GOODBYE /10.10.34.11:52308 ********
+761:2015-07-29 19:14:06,236 - CRITICAL  [LearnerHandler-/10.10.34.12:59060:LearnerHandler@575] - ******* GOODBYE /10.10.34.12:59060 ********
+762:2015-07-29 19:14:46,264 - CRITICAL  [LearnerHandler-/10.10.34.12:59103:LearnerHandler@575] - ******* GOODBYE /10.10.34.12:59103 ********
+763:2015-07-29 19:14:56,371 - CRITICAL  [LearnerHandler-/10.10.34.13:57247:LearnerHandler@575] - ******* GOODBYE /10.10.34.13:57247 ********
+764:2015-07-29 19:15:16,204 - CRITICAL [LearnerHandler-/10.10.34.11:52419:LearnerHandler@562] - Unexpected exception causing shutdown while sock still open
+765:2015-07-29 19:15:56,423 - CRITICAL  [LearnerHandler-/10.10.34.13:57319:LearnerHandler@575] - ******* GOODBYE /10.10.34.13:57319 ********
+766:2015-07-29 19:16:06,243 - CRITICAL  [LearnerHandler-/10.10.34.11:52476:LearnerHandler@575] - ******* GOODBYE /10.10.34.11:52476 ********
+767:2015-07-29 19:16:06,336 - CRITICAL  [LearnerHandler-/10.10.34.12:59203:LearnerHandler@575] - ******* GOODBYE /10.10.34.12:59203 ********
+768:2015-07-29 19:16:16,339 - CRITICAL  [LearnerHandler-/10.10.34.12:59211:LearnerHandler@575] - ******* GOODBYE /10.10.34.12:59211 ********
+769:2015-07-29 19:16:26,268 - CRITICAL  [LearnerHandler-/10.10.34.11:52502:LearnerHandler@575] - ******* GOODBYE /10.10.34.11:52502 ********
+770:2015-07-29 19:16:26,447 - CRITICAL [LearnerHandler-/10.10.34.13:57354:LearnerHandler@562] - Unexpected exception causing shutdown while sock still open
+771:2015-07-29 19:17:36,507 - CRITICAL [LearnerHandler-/10.10.34.13:57438:LearnerHandler@562] - Unexpected exception causing shutdown while sock still open
+772:2015-07-29 19:17:56,522 - CRITICAL  [LearnerHandler-/10.10.34.13:57458:LearnerHandler@575] - ******* GOODBYE /10.10.34.13:57458 ********
+773:2015-07-29 19:18:26,565 - CRITICAL  [LearnerHandler-/10.10.34.13:57502:LearnerHandler@575] - ******* GOODBYE /10.10.34.13:57502 ********
+774:2015-07-29 19:18:56,377 - CRITICAL  [LearnerHandler-/10.10.34.11:52703:LearnerHandler@575] - ******* GOODBYE /10.10.34.11:52703 ********
+775:2015-07-29 19:18:56,457 - CRITICAL  [LearnerHandler-/10.10.34.12:59406:LearnerHandler@575] - ******* GOODBYE /10.10.34.12:59406 ********
+776:2015-07-29 19:20:16,690 - CRITICAL [LearnerHandler-/10.10.34.12:59455:LearnerHandler@562] - Unexpected exception causing shutdown while sock still open
+777:2015-07-29 19:20:16,794 - CRITICAL  [LearnerHandler-/10.10.34.13:57580:LearnerHandler@575] - ******* GOODBYE /10.10.34.13:57580 ********
+778:2015-07-29 19:20:36,704 - CRITICAL [LearnerHandler-/10.10.34.12:59480:LearnerHandler@562] - Unexpected exception causing shutdown while sock still open
+779:2015-07-29 19:20:46,814 - CRITICAL [LearnerHandler-/10.10.34.13:57617:LearnerHandler@562] - Unexpected exception causing shutdown while sock still open
+780:2015-07-29 19:20:56,605 - CRITICAL [LearnerHandler-/10.10.34.11:52814:LearnerHandler@562] - Unexpected exception causing shutdown while sock still open
+781:2015-07-29 19:20:56,608 - CRITICAL  [LearnerHandler-/10.10.34.11:52818:LearnerHandler@575] - ******* GOODBYE /10.10.34.11:52818 ********
+782:2015-07-29 19:21:16,619 - CRITICAL  [LearnerHandler-/10.10.34.11:52844:LearnerHandler@575] - ******* GOODBYE /10.10.34.11:52844 ********
+783:2015-07-29 19:21:16,835 - CRITICAL  [LearnerHandler-/10.10.34.13:57653:LearnerHandler@575] - ******* GOODBYE /10.10.34.13:57653 ********
+784:2015-07-29 19:21:26,625 - CRITICAL [LearnerHandler-/10.10.34.11:52855:LearnerHandler@562] - Unexpected exception causing shutdown while sock still open
+785:2015-07-29 19:21:31,738 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+787:2015-07-29 19:21:35,084 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 2, error = 
+789:2015-07-29 19:21:35,292 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+790:2015-07-29 19:21:38,426 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 2, error = 
+792:2015-07-29 19:21:38,626 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 2, error = 
+793:2015-07-29 19:21:41,969 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+794:2015-07-29 19:21:41,976 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+795:2015-07-29 19:21:41,976 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+796:2015-07-29 19:21:45,107 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+797:2015-07-29 19:21:45,109 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+799:2015-07-29 19:21:48,542 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+800:2015-07-29 19:21:48,545 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+802:2015-07-29 19:21:51,887 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+803:2015-07-29 19:21:52,000 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 2, error = 
+804:2015-07-29 19:21:58,680 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+805:2015-07-29 19:22:01,826 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+806:2015-07-29 19:22:05,161 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+807:2015-07-29 19:22:05,251 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 2, error = 
+808:2015-07-29 19:22:08,591 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+809:2015-07-29 19:22:08,701 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 2, error = 
+811:2015-07-29 19:22:15,277 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 2, error = 
+812:2015-07-29 19:22:18,520 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+813:2015-07-29 19:22:18,628 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 2, error = 
+814:2015-07-29 19:22:21,958 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+816:2015-07-29 19:22:25,295 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+818:2015-07-29 19:22:28,748 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 2, error = 
+819:2015-07-29 19:22:28,749 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+820:2015-07-29 19:22:42,000 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+822:2015-07-29 19:22:55,364 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 2, error = 
+824:2015-07-29 19:22:58,628 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+825:2015-07-29 19:22:58,710 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 2, error = 
+826:2015-07-29 19:22:58,818 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 2, error = 
+828:2015-07-29 19:22:58,824 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+829:2015-07-29 19:23:01,969 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 2, error = 
+830:2015-07-29 19:23:01,977 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 2, error = 
+831:2015-07-29 19:23:05,500 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+832:2015-07-29 19:23:08,841 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+833:2015-07-29 19:23:12,078 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 2, error = 
+834:2015-07-29 19:23:12,182 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+835:2015-07-29 19:23:15,435 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+836:2015-07-29 19:23:18,864 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+837:2015-07-29 19:23:22,092 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+838:2015-07-29 19:23:25,440 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+839:2015-07-29 19:23:25,546 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+840:2015-07-29 19:23:28,902 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+841:2015-07-29 19:23:32,242 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+842:2015-07-29 19:23:38,924 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+843:2015-07-29 19:23:42,263 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+844:2015-07-29 19:23:45,608 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+845:2015-07-29 19:23:48,744 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+846:2015-07-29 19:23:48,819 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 2, error = 
+847:2015-07-29 19:23:48,945 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+848:2015-07-29 19:23:52,080 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+849:2015-07-29 19:23:52,094 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+851:2015-07-29 19:23:52,167 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+852:2015-07-29 19:23:52,285 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+853:2015-07-29 19:23:55,508 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+854:2015-07-29 19:24:02,100 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+857:2015-07-29 19:24:05,463 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 2, error = 
+858:2015-07-29 19:24:05,530 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+860:2015-07-29 19:24:08,884 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+861:2015-07-29 19:24:12,123 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+862:2015-07-29 19:24:12,331 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 2, error = 
+863:2015-07-29 19:24:12,334 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+864:2015-07-29 19:24:19,011 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+865:2015-07-29 19:24:22,234 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+867:2015-07-29 19:24:25,681 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+868:2015-07-29 19:24:28,942 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+869:2015-07-29 19:24:29,022 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+870:2015-07-29 19:24:35,596 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 2, error = 
+871:2015-07-29 19:24:35,703 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+873:2015-07-29 19:24:42,397 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+875:2015-07-29 19:24:45,647 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+876:2015-07-29 19:24:48,888 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 2, error = 
+877:2015-07-29 19:24:48,958 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 2, error = 
+878:2015-07-29 19:24:52,310 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+879:2015-07-29 19:24:52,417 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+881:2015-07-29 19:24:55,570 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+882:2015-07-29 19:24:55,669 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+883:2015-07-29 19:24:58,991 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+885:2015-07-29 19:25:02,441 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+886:2015-07-29 19:25:02,441 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+889:2015-07-29 19:25:05,783 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 2, error = 
+890:2015-07-29 19:25:09,110 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 2, error = 
+891:2015-07-29 19:25:09,122 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 2, error = 
+892:2015-07-29 19:25:12,262 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+893:2015-07-29 19:25:15,614 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 2, error = 
+894:2015-07-29 19:25:15,695 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+895:2015-07-29 19:25:15,711 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+896:2015-07-29 19:25:15,802 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 2, error = 
+897:2015-07-29 19:25:15,803 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+898:2015-07-29 19:25:19,035 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+899:2015-07-29 19:25:25,630 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+900:2015-07-29 19:25:29,074 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+901:2015-07-29 19:25:29,166 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+903:2015-07-29 19:25:32,505 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+904:2015-07-29 19:25:39,079 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 2, error = 
+905:2015-07-29 19:25:39,080 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+906:2015-07-29 19:25:39,188 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 2, error = 
+907:2015-07-29 19:25:42,340 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+908:2015-07-29 19:25:49,016 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+909:2015-07-29 19:25:49,027 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+911:2015-07-29 19:26:04,443 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+912:2015-07-29 19:26:07,781 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+913:2015-07-29 19:26:07,890 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+915:2015-07-29 19:26:14,363 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+916:2015-07-29 19:26:14,459 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 2, error = 
+918:2015-07-29 19:26:17,801 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+919:2015-07-29 19:26:17,908 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+920:2015-07-29 19:26:21,040 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+921:2015-07-29 19:26:24,383 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 2, error = 
+923:2015-07-29 19:26:44,416 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+924:2015-07-29 19:26:44,418 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+928:2015-07-29 19:26:51,304 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 2, error = 
+929:2015-07-29 19:26:54,437 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 2, error = 
+930:2015-07-29 19:26:54,644 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+931:2015-07-29 19:26:57,772 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 2, error = 
+932:2015-07-29 19:26:57,875 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+933:2015-07-29 19:26:57,983 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+934:2015-07-29 19:27:01,216 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+935:2015-07-29 19:27:01,320 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 2, error = 
+936:2015-07-29 19:27:04,552 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+937:2015-07-29 19:27:08,001 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+938:2015-07-29 19:27:09,111 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+939:2015-07-29 19:27:17,809 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+940:2015-07-29 19:27:18,022 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+941:2015-07-29 19:27:21,149 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+942:2015-07-29 19:27:21,250 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 2, error = 
+944:2015-07-29 19:27:24,498 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+945:2015-07-29 19:27:27,836 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 2, error = 
+946:2015-07-29 19:27:27,838 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+947:2015-07-29 19:27:27,927 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+949:2015-07-29 19:27:32,489 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+954:2015-07-29 19:28:07,021 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+955:2015-07-29 19:28:07,225 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+957:2015-07-29 19:28:10,465 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+958:2015-07-29 19:28:13,703 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+959:2015-07-29 19:28:17,044 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+961:2015-07-29 19:28:20,797 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+962:2015-07-29 19:28:23,724 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+963:2015-07-29 19:28:23,927 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+964:2015-07-29 19:28:24,137 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 2, error = 
+965:2015-07-29 19:28:27,063 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 2, error = 
+966:2015-07-29 19:28:27,167 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+967:2015-07-29 19:28:27,170 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+968:2015-07-29 19:28:30,509 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+969:2015-07-29 19:28:30,511 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+971:2015-07-29 19:28:33,951 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+972:2015-07-29 19:28:40,426 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 2, error = 
+974:2015-07-29 19:28:40,533 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+976:2015-07-29 19:28:43,772 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 2, error = 
+978:2015-07-29 19:28:47,314 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 2, error = 
+979:2015-07-29 19:28:47,520 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 2, error = 
+980:2015-07-29 19:28:53,993 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 2, error = 
+982:2015-07-29 19:28:57,235 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+983:2015-07-29 19:28:57,236 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+986:2015-07-29 19:29:03,812 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+987:2015-07-29 19:29:03,816 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+988:2015-07-29 19:29:04,018 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+989:2015-07-29 19:29:04,027 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+990:2015-07-29 19:29:10,495 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+991:2015-07-29 19:29:10,701 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+993:2015-07-29 19:29:17,382 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+994:2015-07-29 19:29:17,388 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+995:2015-07-29 19:29:23,859 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+996:2015-07-29 19:29:23,959 - CRITICAL  [SendWorker:188978561024:QuorumCnxManager$SendWorker@688] - Send worker leaving thread
+997:2015-07-29 19:29:23,962 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+998:2015-07-29 19:29:27,198 - CRITICAL  [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = 2, error = 
