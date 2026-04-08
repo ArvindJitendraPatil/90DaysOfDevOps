@@ -23,7 +23,7 @@ err_count(){
 
 critical_events(){
     echo -e "\n==========CRITICAL MESSAGES=========="
-    grep -n "CRITICAL" "$fname"
+    grep -n "CRITICAL" "$fname" # "WARN" 
 }
 
 top_5(){
