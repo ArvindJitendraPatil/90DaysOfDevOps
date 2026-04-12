@@ -33,6 +33,11 @@ perfectly. That is why we use branches, experiment on other branches first then 
 8. Delete a branch you no longer need
 9. Add all branching commands to your `git-commands.md`
 
+![snapshot](images/create_branch.png)
+
+![snapshot](images/git_branch_delete.png)
+
+
 ---
 
 ## Task 3: Push to GitHub
@@ -46,8 +51,13 @@ perfectly. That is why we use branches, experiment on other branches first then 
   * `Origin` -  Points to your remote repository.
   * `Upstream` - Points to the repository you forked from.
     - If not forked then no need of upstream.
-    
-   
+
+![snapshot](images/branch_show_github.png)
+
+![snapshot](images/file_add_branch.png)
+
+![snapshot](images/switch_branch.png)
+
 ---
 
 ## Task 4: Pull from GitHub
