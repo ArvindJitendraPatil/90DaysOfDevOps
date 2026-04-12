@@ -6,6 +6,7 @@ Git is a distributed version control system used to manage code history and enab
 1. Verify Git is installed on your machine
 2. Set up your Git identity — name and email
 3. Verify your configuration
+
 ![snapshot](images/git_instatll.png)
 ---
 
@@ -14,6 +15,7 @@ Git is a distributed version control system used to manage code history and enab
 2. Initialize it as a Git repository
 3. Check the status — read and understand what Git is telling you
 4. Explore the hidden `.git/` directory — look at what's inside
+
 ![snapshot](images/git_create_folder.png)
 
 ---
@@ -35,6 +37,7 @@ Git is a distributed version control system used to manage code history and enab
 2. Check what's staged
 3. Commit with a meaningful message
 4. View your commit history
+
 ![snapshot](images/git_file_add.png)
    
 ---
@@ -45,6 +48,7 @@ Git is a distributed version control system used to manage code history and enab
 3. Stage and commit again with a different, descriptive message
 4. Repeat this process at least **3 times** so you have multiple commits in your history
 5. View the full history in a compact format
+
 ![snapshot](images/git_log.png)
    
 ---
