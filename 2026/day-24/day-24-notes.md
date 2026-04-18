@@ -46,7 +46,8 @@
      * Because rebase rewrites commit history. If others have already pulled those commits,
        then it will create confusion and conflicts.
    - When would you use rebase vs merge?
-     * Merge, as it preserves when the commit was exactly made.
+     `merge` is used when you want to keep the full branch history, showing exactly when branches split and came back together.  
+     `rebase` is used when you want a clean, linear history, rewriting commits so they look sequential.  
 
 ---
 
