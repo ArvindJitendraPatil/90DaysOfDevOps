@@ -24,6 +24,12 @@
      * A merge conflict occurs when the same part of a file is changed in two branches. 
        When merging, Git cannot automatically  decide which change to keep. 
        Git will pause and require you to resolve the conflict before completing the merge.
+       
+![snapshot](images/merge_feature-login_main.png)
+
+![snapshot](images/merge_conflict_message.png)
+
+
 ---
 
 ## Task 2: Git Rebase — Hands-On
@@ -47,7 +53,9 @@
        then it will create confusion and conflicts.
    - When would you use rebase vs merge?
      `merge` is used when you want to keep the full branch history, showing exactly when branches split and came back together.  
-     `rebase` is used when you want a clean, linear history, rewriting commits so they look sequential.  
+     `rebase` is used when you want a clean, linear history, rewriting commits so they look sequential.
+
+![snapshot](images/rebase_branch_feature.png)
 
 ---
 
@@ -70,6 +78,9 @@
      * If one file has multiple commits, then squashing is better. Else regular merge.
    - What is the trade-off of squashing?
      * Detailed commit history is lost from feature branch as only one commit will be shown in main branch.
+
+![snapshot](images/squash-commit.png)
+![snapshot](images/merge.png)
 
 ---
 
@@ -97,6 +108,9 @@
    - When would you use stash in a real-world workflow?
      * When an urgent fix comes up, I would stash changes from my current branch and switch to another branch 
        to work on urgent fix first.
+       
+![snapshot](images/stash-check.png)
+![snapshot](images/stash-pop-check.png)
 
 ---
 
@@ -117,6 +131,9 @@
    - What can go wrong with cherry-picking?
      * If the same branch is merged then it will create duplicate commits.
      * It may create conflicts if the commit depends on previous commits.
+       
+![snapshot](images/cherry.png)
 ![snapshot](images/cherry_pick.png)
+
 ---
 
