@@ -117,6 +117,6 @@
    - What can go wrong with cherry-picking?
      * If the same branch is merged then it will create duplicate commits.
      * It may create conflicts if the commit depends on previous commits.
-
+![snapshot](images/cherry_pick.png)
 ---
 
