@@ -47,9 +47,11 @@ Before making changes, assess where you stand:
 
 * Before
 
+![snapshot](images/git-hub_before.png)
     
 * After
 
+![snapshot](images/git-hub_after.png)
 
     
 ---
