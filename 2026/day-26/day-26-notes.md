@@ -8,7 +8,7 @@
 4. Answer in your notes: What authentication methods does `gh` support?
     - Web browser or personal access token
  
-
+![snapshot](images/auth_status.png)
 
 ---
 
@@ -19,9 +19,11 @@
 4. List all your repositories
 5. Open a repo in your browser directly from the terminal
 6. Delete the test repo you created (be careful!)
-
    
-    
+![snapshot](images/gh_repo_create.png)
+![snapshot](images/gh_repo_delete.png)
+![snapshot](images/gh_repo_list.png)
+ 
 ---
 
 ## Task 3: Issues
@@ -36,8 +38,9 @@
       - gh issue comment <issue num>
       - gh issue close <issue num>
 
- 
-    
+![snapshot](images/gh_issue_list.png)
+![snapshot](images/gh_issue_close.png)
+
 ---
 
 ## Task 4: Pull Requests
