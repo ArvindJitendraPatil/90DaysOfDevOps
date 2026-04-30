@@ -7,22 +7,21 @@
 
 4. Answer in your notes: What authentication methods does `gh` support?
     - Web browser or personal access token
- 
+      
 ![snapshot](images/auth_status.png)
 
 ---
 
 ## Task 2: Working with Repositories
 1. Create a **new GitHub repo** directly from the terminal — make it public with a README
+![snapshot](images/gh_repo_create.png)
 2. Clone a repo using `gh` instead of `git clone`
 3. View details of one of your repos from the terminal
+![snapshot](images/gh_repo_list.png)
 4. List all your repositories
 5. Open a repo in your browser directly from the terminal
 6. Delete the test repo you created (be careful!)
-   
-![snapshot](images/gh_repo_create.png)
 ![snapshot](images/gh_repo_delete.png)
-![snapshot](images/gh_repo_list.png)
  
 ---
 
@@ -34,11 +33,11 @@
 
 5. Answer in your notes: How could you use `gh issue` in a script or automation?
     * By combining gh issue commands in a script, you can automate workflows such as:
+![snapshot](images/gh_issue_list.png)
       - gh issue list
       - gh issue comment <issue num>
       - gh issue close <issue num>
 
-![snapshot](images/gh_issue_list.png)
 ![snapshot](images/gh_issue_close.png)
 
 ---
