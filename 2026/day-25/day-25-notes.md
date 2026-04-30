@@ -33,6 +33,8 @@
    
    - Should you ever use `git reset` on commits that are already pushed?
      * No, already pushed commits could have been pulled and used by other people so it will create confusion and conflicts.
+  
+![snapshot](images/git-reset.png)
 
 ---
 
@@ -50,6 +52,8 @@ specified
      * Because it preserves history.
    - When would you use revert vs reset?
      * When you don't want to changes history use `revert`. If you want the commit to be deleted from history use `reset`.
+
+![snapshot](images/git-revert.png)
 
 ---
 
