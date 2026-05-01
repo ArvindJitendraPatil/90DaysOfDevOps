@@ -22,11 +22,12 @@ We use containers to solve the issue “it works on my machine but not on others
     | Fast performance | Slow performance |
     | Highly portable | Less portable|
 
-- What is the Docker architecture? (daemon, client, images, containers, registry)
+- What is the Docker architecture? (Client, Daemon, Engine, Images, Containers, Registry)
 
-    * Daemon - It manages containers, images, networks, volumes. In short all objects of Docker.
     * Client - It is used to command docker daemon. It can manage one or more docker daemon.
-    * Images - It is the blueprint to build container. It contains all the commands to run an application.
+    * Daemon - It manages containers, images, networks, volumes. In short all objects of Docker.
+    * Engine - The Docker Engine is the complete runtime environment, which includes the client, daemon, and REST API.
+    * Images - It is the blueprint to build container. It contains all the commands to run an application. one image create multiple container.
     * Containers - It is the actual instance of an image. Application runs inside container isolated.
     * Registry - It is where all the images are stored. There are two types :
        * Public : e.g. Docker Hub, accessible to everyone.
@@ -34,8 +35,14 @@ We use containers to solve the issue “it works on my machine but not on others
 
 ## Task 2: Install Docker
 1. Install Docker on your machine (or use a cloud instance)
+- `sudo apt-get install docker.io -- install in ec2`
+- `sudo usermod -aG docker $USER && newgrp docker`
+- `docker ps`
+
 2. Verify the installation
+- `docker --version` 
 3. Run the `hello-world` container
+- `docker run hello-world`
 4. Read the output carefully — it explains what just happened
     
     
