@@ -68,7 +68,7 @@ Build and run it. Understand what each line does.
 2. Add entries for: `node_modules`, `.git`, `*.md`, `.env`
 3. Build the image — verify that ignored files are not included
 
-![snapshot](images/java-tomcat.png)
+![snapshot](images/cmd.dockerignore.png)
 
 ---
 
