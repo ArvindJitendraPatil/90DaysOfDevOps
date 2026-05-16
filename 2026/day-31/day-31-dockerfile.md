@@ -11,6 +11,7 @@
 
 **Verify:** The message prints on `docker run`
 
+![snapshot](images/ubuntu-Dockerfile-image.png)
   
     
 ---
@@ -26,7 +27,13 @@ Create a new Dockerfile that uses **all** of these instructions:
 
 Build and run it. Understand what each line does.
 
+![snapshot](images/Dockerfile-python-images.png)
 
+![snapshot](images/py-localhost-docs.png)
+
+![snapshot](images/py-metrics.png)
+
+![snapshot](images/py-container.png)
     
 ---
 
