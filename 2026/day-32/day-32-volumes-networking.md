@@ -55,7 +55,7 @@
     
 3. Access the page in your browser
     ![image](images/task3.3.png)
-    ![image](images/task 3.3.png)
+    ![image](images/task3.3.1.png)
 
 4. Edit the `index.html` on your host — refresh the browser
 
