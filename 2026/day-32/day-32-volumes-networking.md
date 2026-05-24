@@ -54,11 +54,14 @@
     ![image](images/task3.2.png)
     
 3. Access the page in your browser
-    ![image](images/task3.3.png)
-    ![image](images/task3.3.1.png)
 
+    ![image](images/task3.3.1.png)
+    
+    
 4. Edit the `index.html` on your host — refresh the browser
 
+    ![image](images/task3.3.png)
+    
     ![image](images/task3.4.png)
 
 **Volumes vs Bind Mounts**
