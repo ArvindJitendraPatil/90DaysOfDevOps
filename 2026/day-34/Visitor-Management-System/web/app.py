@@ -1,76 +1,47 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 import psycopg2
 import redis
-import time
 
 app = Flask(__name__)
 
-# PostgreSQL Connection
+db = psycopg2.connect(
+    host="db",
+    database="visitors",
+    user="postgres",
+    password="postgres"
+)
 
-while True:
-    try:
-        conn = psycopg2.connect(
-            host="postgres",
-            database="visitors",
-            user="admin",
-            password="admin123"
-        )
+cursor = db.cursor()
 
-        cur = conn.cursor()
+cursor.execute("""
+CREATE TABLE IF NOT EXISTS visitors(
+id SERIAL PRIMARY KEY,
+visitor_id VARCHAR(50),
+name VARCHAR(100),
+purpose VARCHAR(200)
+)
+""")
 
-        cur.execute("""
-        CREATE TABLE IF NOT EXISTS visitors(
-            id SERIAL PRIMARY KEY,
-            visitor_id VARCHAR(20),
-            name VARCHAR(100),
-            purpose VARCHAR(100)
-        )
-        """)
+db.commit()
 
-        conn.commit()
-        break
-
-    except:
-        print("Waiting for PostgreSQL...")
-        time.sleep(5)
-
-# Redis Connection
-
-while True:
-    try:
-        r = redis.Redis(
-            host="redis",
-            port=6379,
-            decode_responses=True
-        )
-
-        r.ping()
-        break
-
-    except:
-        print("Waiting for Redis...")
-        time.sleep(5)
+r = redis.Redis(host="redis", port=6379)
 
 @app.route("/")
 def home():
+    return render_template("index.html")
 
-    visits = r.incr("homepage_visits")
-
-    return jsonify({
-        "message":"Visitor Management System",
-        "homepage_visits":visits
-    })
+@app.route("/api/visits")
+def visits():
+    count = r.incr("homepage_visits")
+    return jsonify({"visits": count})
 
 @app.route("/visitor", methods=["POST"])
 def add_visitor():
 
-    data = request.get_json()
+    data = request.json
 
-    cur.execute(
-        """
-        INSERT INTO visitors(visitor_id,name,purpose)
-        VALUES(%s,%s,%s)
-        """,
+    cursor.execute(
+        "INSERT INTO visitors(visitor_id,name,purpose) VALUES(%s,%s,%s)",
         (
             data["visitor_id"],
             data["name"],
@@ -78,7 +49,7 @@ def add_visitor():
         )
     )
 
-    conn.commit()
+    db.commit()
 
     return jsonify({
         "message":"Visitor Added Successfully"
@@ -87,23 +58,19 @@ def add_visitor():
 @app.route("/visitor", methods=["GET"])
 def get_visitors():
 
-    cur.execute(
-        """
-        SELECT visitor_id,name,purpose
-        FROM visitors
-        """
+    cursor.execute(
+        "SELECT visitor_id,name,purpose FROM visitors"
     )
 
-    rows = cur.fetchall()
+    rows = cursor.fetchall()
 
-    visitors=[]
+    visitors = []
 
     for row in rows:
-
         visitors.append({
-            "visitor_id":row[0],
-            "name":row[1],
-            "purpose":row[2]
+            "visitor_id": row[0],
+            "name": row[1],
+            "purpose": row[2]
         })
 
     return jsonify(visitors)

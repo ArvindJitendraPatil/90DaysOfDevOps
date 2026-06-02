@@ -1,47 +1,43 @@
 <h1 align="center">🚀 Visitor Management System</h1>
 
 <p align="center">
-  <b>Flask + PostgreSQL + Redis + Docker Compose</b>
+  <strong>Flask • PostgreSQL • Redis • Docker Compose</strong>
 </p>
 
 <p align="center">
-  A production-style multi-container application demonstrating Docker, Networking, Volumes, Databases, Caching, and REST APIs.
+  A modern multi-container application demonstrating Docker Networking, Volumes, PostgreSQL, Redis Caching, REST APIs, and a responsive Web UI.
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Python-3.11-blue?style=for-the-badge">
-  <img src="https://img.shields.io/badge/Flask-Web_App-black?style=for-the-badge">
-  <img src="https://img.shields.io/badge/PostgreSQL-Database-blue?style=for-the-badge">
-  <img src="https://img.shields.io/badge/Redis-Cache-red?style=for-the-badge">
-  <img src="https://img.shields.io/badge/Docker-Containerization-blue?style=for-the-badge">
-  <img src="https://img.shields.io/badge/Docker_Compose-Orchestration-green?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Python-3.11-blue?style=for-the-badge&logo=python">
+  <img src="https://img.shields.io/badge/Flask-Web_App-black?style=for-the-badge&logo=flask">
+  <img src="https://img.shields.io/badge/PostgreSQL-Database-blue?style=for-the-badge&logo=postgresql">
+  <img src="https://img.shields.io/badge/Redis-Cache-red?style=for-the-badge&logo=redis">
+  <img src="https://img.shields.io/badge/Docker-Containerization-blue?style=for-the-badge&logo=docker">
+  <img src="https://img.shields.io/badge/Docker_Compose-Orchestration-green?style=for-the-badge&logo=docker">
 </p>
 
 ---
 
-# 🌟 Project Overview
+## 📖 Overview
 
-This project is a complete Visitor Management System built using modern DevOps practices.
+The **Visitor Management System** is a production-style application built with Flask, PostgreSQL, Redis, and Docker Compose.
 
-The application allows users to:
+It demonstrates how multiple services can work together inside containers while maintaining persistence, networking, and scalability.
 
-✅ Add Visitors
+### ✨ Key Capabilities
 
-✅ View Visitors
-
-✅ Store Visitor Information in PostgreSQL
-
-✅ Track Website Visits using Redis
-
-✅ Run Multiple Containers using Docker Compose
-
-✅ Persist Data using Docker Volumes
-
-✅ Enable Container Communication using Docker Networks
+- 📝 Add Visitors through a Web UI
+- 📋 View Visitor Records instantly
+- 🗄️ Store Visitor Information in PostgreSQL
+- ⚡ Track Website Visits using Redis
+- 🐳 Deploy with Docker Compose
+- 💾 Persist Data using Docker Volumes
+- 🌐 Enable Container Communication via Docker Networks
 
 ---
 
-# 🏗️ Solution Architecture
+## 🏗️ Architecture
 
 ```text
                     ┌──────────────┐
@@ -51,7 +47,7 @@ The application allows users to:
                            ▼
                 ┌────────────────────┐
                 │   Flask Web App    │
-                │   visitor-app      │
+                │   Visitor UI       │
                 └─────────┬──────────┘
                           │
           ┌───────────────┴───────────────┐
@@ -63,80 +59,85 @@ The application allows users to:
  │ Visitor Records │           │ Visit Counter   │
  └─────────────────┘           └─────────────────┘
 
-         Docker Network : visitor-network
+      Docker Network : visitor-network
 
-         Docker Volumes :
-         ├── postgres-data
-         └── redis-data
+      Docker Volumes :
+      ├── postgres-data
+      └── redis-data
 ```
 
 ---
 
-# 🚀 Features
+## 🚀 Features
 
 | Feature | Description |
 |----------|------------|
-| Flask REST API | Handles Requests |
-| PostgreSQL | Persistent Visitor Storage |
-| Redis | Homepage Visitor Counter |
-| Docker Compose | Multi-Container Deployment |
-| Docker Network | Container Communication |
-| Docker Volumes | Persistent Storage |
-| REST APIs | Add and Retrieve Visitors |
+| 🌐 Flask Web UI | User-friendly interface |
+| 🗄️ PostgreSQL | Persistent visitor storage |
+| ⚡ Redis | Homepage visit counter |
+| 🐳 Docker Compose | Multi-container deployment |
+| 🌐 Docker Network | Container communication |
+| 💾 Docker Volumes | Persistent storage |
+| 🔌 REST APIs | Add & Retrieve visitors |
+| 📱 Responsive UI | HTML, CSS & JavaScript |
 
 ---
 
-# 🛠️ Technology Stack
+## 🛠️ Technology Stack
 
 | Technology | Purpose |
 |------------|---------|
-| Python | Backend Language |
+| Python | Backend Development |
 | Flask | Web Framework |
+| HTML | Frontend Structure |
+| CSS | Styling |
+| JavaScript | Dynamic Functionality |
 | PostgreSQL | Database |
 | Redis | Cache |
 | Docker | Containerization |
-| Docker Compose | Orchestration |
+| Docker Compose | Service Orchestration |
 
 ---
 
-# 📂 Project Structure
+## 📂 Project Structure
 
 ```text
 visitor-management-app/
 │
-├── README.md
 ├── docker-compose.yml
+├── README.md
 │
 └── web/
+    │
     ├── app.py
     ├── requirements.txt
-    └── Dockerfile
+    ├── Dockerfile
+    │
+    ├── templates/
+    │   └── index.html
+    │
+    └── static/
+        ├── style.css
+        └── script.js
 ```
 
 ---
 
-# ⚡ Quick Start
+## ⚡ Quick Start
 
-### Clone Repository
-
-```bash
-git clone https://github.com/<your-username>/Visitor-Management-System.git
-cd Visitor-Management-System
-```
-
-### Build Application
+### Build Containers
 
 ```bash
 docker compose build
 ```
 
-### Run Application
+### Start Application
 
 ```bash
 docker compose up -d
 ```
 
-### Verify
+### Verify Containers
 
 ```bash
 docker ps
@@ -144,32 +145,37 @@ docker ps
 
 ---
 
-# 📡 API Endpoints
+## 🌍 Access Application
 
-## Homepage
+Open your browser:
+
+```text
+http://<PUBLIC-IP>:5000
+```
+
+Example:
+
+```text
+http://18.141.186.21:5000
+```
+
+---
+
+## 📡 API Endpoints
+
+### Get Homepage
 
 ```http
 GET /
 ```
 
-Response
-
-```json
-{
-  "message":"Visitor Management System",
-  "homepage_visits":1
-}
-```
-
----
-
-## Add Visitor
+### Add Visitor
 
 ```http
 POST /visitor
 ```
 
-Request
+Request:
 
 ```json
 {
@@ -179,7 +185,7 @@ Request
 }
 ```
 
-Response
+Response:
 
 ```json
 {
@@ -189,13 +195,13 @@ Response
 
 ---
 
-## Get Visitors
+### Get All Visitors
 
 ```http
 GET /visitor
 ```
 
-Response
+Response:
 
 ```json
 [
@@ -209,42 +215,50 @@ Response
 
 ---
 
-# 🐳 Docker Components Used
+### Homepage Visit Counter
 
-### Dockerfile
+```http
+GET /api/visits
+```
 
-Creates a custom Flask image.
+Response:
 
-### Docker Compose
+```json
+{
+  "visits": 10
+}
+```
 
-Deploys:
+---
 
-- Flask Container
-- PostgreSQL Container
-- Redis Container
+## 🐳 Docker Components
 
-### Docker Volumes
+### Docker Compose Services
+
+| Service | Purpose |
+|----------|---------|
+| Flask | Web Application |
+| PostgreSQL | Visitor Database |
+| Redis | Visit Counter Cache |
+
+### Volumes
 
 ```text
 postgres-data
 redis-data
 ```
 
-Used for persistent storage.
-
-### Docker Network
+### Network
 
 ```text
 visitor-network
 ```
 
-Used for secure container communication.
-
 ---
 
-# 🔍 Verification Commands
+## 🔍 Verification Commands
 
-### Containers
+### Running Containers
 
 ```bash
 docker ps
@@ -270,40 +284,50 @@ docker compose logs -f
 
 ---
 
-# 🎯 Learning Outcomes
+## 📸 Screenshots
 
-By building this project I learned:
+### 🏠 Home Page
 
-✅ Docker Images
+```text
+images/homepage.png
+```
 
-✅ Docker Containers
+### ➕ Add Visitor
 
-✅ Docker Networking
+```text
+images/add-visitor.png
+```
 
-✅ Docker Volumes
+### 📋 Visitor Records
 
-✅ Docker Compose
+```text
+images/visitor-list.png
+```
 
-✅ Flask API Development
+### 🐳 Running Containers
 
-✅ PostgreSQL Integration
-
-✅ Redis Integration
-
-✅ Container Communication
-
-✅ Multi-Container Application Deployment
+```text
+images/docker-ps.png
+```
 
 ---
 
-# 👨‍💻 Author
+## 🎯 Learning Outcomes
+
+Through this project, I gained practical experience in building and deploying a multi-container application using Docker Compose. I learned how to integrate Flask with PostgreSQL and Redis, configure Docker Networks and Volumes, manage container communication, and create a responsive frontend connected to backend APIs.
+
+---
+
+## 👨‍💻 Author
 
 ### Arvind Patil
 
-DevOps Engineer | AWS | Docker | Linux | CI/CD
+**DevOps Engineer | AWS | Docker | Linux | CI/CD**
 
-📌 Currently learning and building real-world DevOps projects through the #90DaysOfDevOps challenge.
+📌 Currently building real-world DevOps projects through the **#90DaysOfDevOps** challenge.
 
 ---
 
-## ⭐ Star this repository if you found it useful!
+<p align="center">
+⭐ If you found this project useful, consider giving it a Star!
+</p>
