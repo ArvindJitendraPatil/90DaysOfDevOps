@@ -120,8 +120,8 @@ visitor-management-app/
 ### Clone Repository
 
 ```bash
-git clone https://github.com/<your-username>/visitor-management-app.git
-cd visitor-management-app
+git clone https://github.com/<your-username>/Visitor-Management-System.git
+cd Visitor-Management-System
 ```
 
 ### Build Application
