@@ -1,4 +1,4 @@
-# Day 35 – Multi-Stage Builds & Docker Hub 🚀
+# Day 35 – Multi-Stage Builds & Docker Hub
 
 ## Task 1: The Problem with Large Images
 
@@ -33,7 +33,7 @@ docker images
 
 | Image             | Size   |
 | ----------------- | ------ |
-| single-stage-node | ~900MB |
+| single-stage-node | 1.58 GB |
 
 ### Observation
 
@@ -43,6 +43,9 @@ The image size was large because it contained:
 * Development tools
 * Runtime files
 * Extra layers
+
+![image](images/task1.png)
+![image](images/task1.1.png)
 
 ---
 
@@ -82,6 +85,9 @@ docker images
 
 Multi-stage builds remove unnecessary build tools and dependencies from the final image, resulting in significantly smaller images.
 
+![image](images/task2.png)
+![image](images/task2.1.png)
+
 ---
 
 # Task 3: Push to Docker Hub
@@ -117,6 +123,10 @@ docker pull arvindjitendrapatil/multi-stage-node:1.0
 
 ✅ Image Pulled Successfully
 
+![image](images/task3.1.png)
+![image](images/task3.2.png)
+![image](images/task3.3.png)
+
 ---
 
 # Task 4: Docker Hub Repository
@@ -151,6 +161,10 @@ docker pull arvindjitendrapatil/multi-stage-node:latest
 Docker only creates tags that are explicitly pushed.
 
 Version tags provide predictable deployments.
+
+![image](images/task4.png)
+![image](images/task4.1.png)
+![image](images/task4.2.png)
 
 ---
 
@@ -193,6 +207,10 @@ docker run -d -p 8082:3000 best-node-app
 ✅ Smaller Attack Surface
 
 ✅ Better Security
+
+![image](images/task5.png)
+![image](images/task5.1.png)
+![image](images/task5.2.png)
 
 ---
 
