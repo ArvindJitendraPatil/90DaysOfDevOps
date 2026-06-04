@@ -134,6 +134,8 @@ Added labels for better service identification and organization.
 
 ✅ Database and Redis data persist across container recreation.
 
+![images](images/task1.1.png)
+
 ---
 
 ## Task 6: Scaling (Bonus)
@@ -203,18 +205,21 @@ to distribute traffic across multiple replicas.
 
 #### Application Home Page
 
-
+![image](images/dashboard.png)
 
 #### Add Visitor API
 
-
+![images](images/Home-Page.png)
 
 #### Get Visitors API
 
+![images](images/visitor-list.png)
 
+![images](images/visitor-number.png)
 
 #### Docker Containers Running
 
+![images](images/containers.png)
 
 ---
 # Learning Outcomes
