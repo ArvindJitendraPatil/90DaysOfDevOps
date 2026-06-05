@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Server Monitoring Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #0f172a;
+            color: #e2e8f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: #1e293b;
+            padding: 20px;
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            padding: 20px;
+        }
+
+        .card {
+            background: #1e293b;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            color: #38bdf8;
+        }
+
+        .value {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #1e293b;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    🚀 Server Monitoring Dashboard
+</header>
+
+<div class="container">
+
+    <div class="card">
+        <h3>Host</h3>
+        <div class="value">{{ hostname }}</div>
+    </div>
+
+    <div class="card">
+        <h3>CPU Usage</h3>
+        <div class="value">{{ cpu }}%</div>
+        <small>Cores: {{ cpu_count }} | Freq: {{ cpu_freq }} MHz</small>
+    </div>
+
+    <div class="card">
+        <h3>Memory Usage</h3>
+        <div class="value">{{ memory }}%</div>
+        <small>Total: {{ memory_total }} GB | Free: {{ memory_available }} GB</small>
+    </div>
+
+    <div class="card">
+        <h3>Disk Usage</h3>
+        <div class="value">{{ disk }}%</div>
+        <small>Total: {{ disk_total }} GB | Free: {{ disk_free }} GB</small>
+    </div>
+
+    <div class="card">
+        <h3>Uptime</h3>
+        <div class="value">{{ uptime }}</div>
+    </div>
+
+    <div class="card">
+        <h3>OS Info</h3>
+        <div class="value">{{ os_name }} {{ os_version }}</div>
+        <small>Python: {{ python_version }}</small>
+    </div>
+
+    <div class="card">
+        <h3>Network</h3>
+        <div class="value">⬆ {{ bytes_sent }} MB</div>
+        <div class="value">⬇ {{ bytes_recv }} MB</div>
+    </div>
+
+    <div class="card">
+        <h3>Load Average</h3>
+        <div class="value">{{ load1 }}, {{ load5 }}, {{ load15 }}</div>
+    </div>
+
+    <div class="card">
+        <h3>System Time</h3>
+        <div class="value">{{ current_time }}</div>
+        <small>Boot: {{ boot_time }}</small>
+    </div>
+
+    <div class="card">
+        <h3>AWS EC2 Info</h3>
+        <small>Instance ID: {{ instance_id }}</small><br>
+        <small>Type: {{ instance_type }}</small><br>
+        <small>AZ: {{ availability_zone }}</small><br>
+        <small>Public IP: {{ public_ip }}</small>
+    </div>
+
+</div>
+
+<footer>
+    ⚙️ Built with Flask + Docker + psutil
+</footer>
+
+</body>
+</html>
