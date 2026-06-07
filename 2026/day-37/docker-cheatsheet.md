@@ -1,4 +1,4 @@
-# Docker Cheat Sheet 🚀
+# Docker Cheat Sheet 
 
 ## Container Commands
 
