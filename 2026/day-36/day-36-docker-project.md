@@ -1,4 +1,4 @@
-# Day 36 – Docker Project: Dockerize a Full Application 🚀
+# Day 36 – Docker Project: Dockerize a Full Application
 
 ## Project Overview
 
@@ -39,10 +39,6 @@ Monitoring is a critical responsibility in DevOps and Site Reliability Engineeri
 * PostgreSQL
 * AWS EC2
 * Linux
-
-![Task 1](images/task1.png)
-![Task 1.1](images/task1.1.png)
-
 ---
 
 # Task 2: Dockerfile Creation
@@ -129,6 +125,9 @@ venv
 * Better security
 * Reduced build context
 
+![Task 1](images/task1.png)
+![Task 1.1](images/task1.1.png)
+
 ---
 
 # Task 3: Docker Compose Setup
@@ -194,6 +193,8 @@ docker tag server-monitoring-dashboard:1.0 <dockerhub-username>/server-monitorin
 docker push <dockerhub-username>/server-monitoring-dashboard:1.0
 ```
 
+![Task 5](images/task5.png)
+
 ## README Created
 
 The README contains:
@@ -237,7 +238,6 @@ docker compose up -d --build
 * Docker networking functions correctly
 * Persistent storage works as expected
 
-![Task 5](images/task5.png)
 ![Task 5.1](images/task5.1.png)
 ![Task 5.2](images/task5.2.png)
 
