@@ -40,6 +40,9 @@ Monitoring is a critical responsibility in DevOps and Site Reliability Engineeri
 * AWS EC2
 * Linux
 
+![Task 1](images/task1.png)
+![Task 1.1](images/task1.1.png)
+
 ---
 
 # Task 2: Dockerfile Creation
@@ -166,6 +169,9 @@ POSTGRES_DB=monitoring
 
 * PostgreSQL health monitoring
 
+![Task 2](images/task2.png)
+![Task 2.1](images/task2.1.png)
+
 ---
 
 # Task 4: Ship It
@@ -230,6 +236,10 @@ docker compose up -d --build
 * Monitoring metrics display properly
 * Docker networking functions correctly
 * Persistent storage works as expected
+
+![Task 5](images/task5.png)
+![Task 5.1](images/task5.1.png)
+![Task 5.2](images/task5.2.png)
 
 ---
 
