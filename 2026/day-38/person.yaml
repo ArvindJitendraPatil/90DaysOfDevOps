@@ -1,0 +1,14 @@
+---
+name: Arvind Patil
+role: DevOps Engineer
+experience_years: 3.5
+learning: true
+
+tools:
+  - Docker
+  - Kubernetes
+  - Jenkins
+  - Terraform
+  - GitHub Actions
+
+hobbies: [Learning New Technologies, Cricket, Reading, Travelling]

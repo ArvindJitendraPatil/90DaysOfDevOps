@@ -1,0 +1,6 @@
+---
+name: devops
+
+tools:
+  - docker
+  - kubernetes

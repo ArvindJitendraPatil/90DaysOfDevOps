@@ -1,0 +1,25 @@
+---
+server:
+  name: devops-server
+  ip: 192.168.1.100
+  port: 8080
+
+database:
+  host: localhost
+  name: employee_db
+
+  credentials:
+    user: admin
+    password: password123
+
+startup_script_preserve: |
+  #!/bin/bash
+  echo "Starting application"
+  systemctl start nginx
+  systemctl start docker
+
+startup_script_fold: >
+  This server hosts
+  the DevOps practice
+  applications and
+  monitoring tools.
