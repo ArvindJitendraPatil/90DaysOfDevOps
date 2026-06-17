@@ -78,6 +78,8 @@ yamllint server.yaml
 Fixed indentation errors and revalidated successfully.
 
 ![Task 5](images/task5.png)
+![Task 5.1](images/task5.1.png)  
+![Task 5.2](images/task5.2.png)
 
 ## Task 6 - Spot the Difference
 
