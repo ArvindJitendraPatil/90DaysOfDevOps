@@ -41,6 +41,7 @@ Created server.yaml with nested:
 * database
 * credentials
 
+![Task 3](images/task3.1.png) 
 ![Task 3.1](images/task3.1.png)  
 ![Task 3.2](images/task3.2.png)
 
