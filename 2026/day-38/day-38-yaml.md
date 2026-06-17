@@ -87,8 +87,9 @@ Incorrect indentation caused YAML parsing errors.
 
 Correct YAML requires consistent spacing.
 
-![Task 6.1](images/task6.1.png)  
 ![Task 6.2](images/task6.2.png)
+![Task 6.1](images/task6.1.png)  
+
 
 
 ## What I Learned
