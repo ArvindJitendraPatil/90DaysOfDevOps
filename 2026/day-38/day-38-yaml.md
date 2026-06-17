@@ -31,6 +31,7 @@ tools:
 ```yaml
 hobbies: [Learning New Technologies, Cricket, Reading, Travelling]
 ```
+
 ![Task 2](images/task2.png) 
 
 ## Task 3 - Nested Objects
@@ -41,7 +42,7 @@ Created server.yaml with nested:
 * database
 * credentials
 
-![Task 3](images/task3.1.png) 
+![Task 3](images/task3.png) 
 ![Task 3.1](images/task3.1.png)  
 ![Task 3.2](images/task3.2.png)
 
