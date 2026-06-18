@@ -185,6 +185,8 @@ Examples:
 
 # Task 4: Pipeline Diagram
 
+![Task 4](images/day-39.jpeg)  
+
 ## CI/CD Pipeline Flow
 
 ```text
