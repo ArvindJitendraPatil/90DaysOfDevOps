@@ -222,10 +222,6 @@ Removed the failing command and pushed again.
 
 Workflow passed successfully (Green ✅)
 
-### Screenshot
-
-Add screenshot of failed workflow and fixed workflow.
-
 ---
 
 # Repository Structure
@@ -234,7 +230,7 @@ Add screenshot of failed workflow and fixed workflow.
 github-actions-practice/
 └── .github/
     └── workflows/
-        └── hello.yml
+        └── hello.yml       
 ```
 
 ---
