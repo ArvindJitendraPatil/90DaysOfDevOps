@@ -28,10 +28,12 @@ Created the workflow directory:
 ```bash
 mkdir -p .github/workflows
 ```
+![Task 1](images/task1.png) 
 
 ### Output
 
 Repository structure ready for GitHub Actions workflows.
+
 
 ---
 
@@ -70,7 +72,8 @@ jobs:
 
 ### Screenshot
 
-Add screenshot of successful workflow run.
+![Task 2.1](images/task2.1.png)  
+![Task 2.2](images/task2.2.png)
 
 ---
 
@@ -180,7 +183,9 @@ jobs:
 
 ### Screenshot
 
-Add screenshot showing workflow logs.
+![Task 4](images/task4.png)
+![Task 4.2](images/task4.2.png)  
+![Task 4.3](images/task4.3.png)
 
 ---
 
@@ -211,8 +216,14 @@ jobs:
         run: exit 1
 
 ```
-        
-     
+### Screenshot
+
+![Task 5.1](images/task5.1.png)
+![Task 5.2](images/task5.2.png)  
+![Task 5.3.1](images/task5.3.1.png)
+![Task 5.3](images/task5.3.png)  
+![Task 5.4](images/task5.4.png)
+
 ## Observation
 
 * Workflow failed
