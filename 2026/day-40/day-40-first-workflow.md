@@ -19,7 +19,7 @@ github-actions-practice
 Cloned the repository locally:
 
 ```bash
-git clone https://github.com/<your-username>/github-actions-practice.git
+git clone https://github.com/ArvindJitendraPatil/github-actions-practice.git
 cd github-actions-practice
 ```
 
