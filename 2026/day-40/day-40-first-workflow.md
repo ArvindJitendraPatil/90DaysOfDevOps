@@ -189,7 +189,7 @@ Add screenshot showing workflow logs.
 ```yaml
 
 # This is a workflow name
-name: name: Hello failed
+name: Hello failed
 
 on:
   push:
@@ -241,18 +241,6 @@ Removed the failing command and pushed again.
 ### Result
 
 Workflow passed successfully (Green ✅)
-
----
-
-# Repository Structure
-
-```text
-github-actions-practice/
-└── .github/
-    └── workflows/
-        └── hello.yml       
-```
-
 ---
 
 # Key Learnings
