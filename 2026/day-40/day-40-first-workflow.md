@@ -186,30 +186,33 @@ Add screenshot showing workflow logs.
 
 # Task 5: Break It On Purpose
 
+```yaml
+
 # This is a workflow name
-name: Hello failed
+name: name: Hello failed
 
 on:
   push:
     branches:
       - main
-# These are jobs inside workflow
+
 jobs:
-# This is the name of the job
   greet:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
-        
-      - name: Print Message
+
+      - name: Print Hello Message
         run: echo "Hello from GitHub Actions!"
-        
+
       - name: Intentional Failure
         run: exit 1
-      
 
+```
+        
+     
 ## Observation
 
 * Workflow failed
