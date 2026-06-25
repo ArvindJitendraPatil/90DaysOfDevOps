@@ -1,0 +1,21 @@
+# This is a workflow name
+name: Hello
+
+#on:
+ # push:
+  #  branches:
+   #   - main
+on:
+  workflow_dispatch:
+# These are jobs inside workflow
+jobs:
+# This is the name of the job
+  greet:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Print Message
+        run: echo "Hello from GitHub Actions!"
