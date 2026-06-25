@@ -200,7 +200,8 @@ on:
   push:
     branches:
       - main
-
+# on:
+  # workflow_dispatch:
 jobs:
   greet:
     runs-on: ubuntu-latest
