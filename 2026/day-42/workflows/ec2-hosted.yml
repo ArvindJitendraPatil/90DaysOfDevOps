@@ -1,0 +1,25 @@
+name: Self Hosted Runner with Labels
+
+on:
+  workflow_dispatch:
+
+jobs:
+  self-hosted-job:
+    runs-on: [self-hosted, my-linux-runner]
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Print Hostname
+        run: hostname
+
+      - name: Print Working Directory
+        run: pwd
+
+      - name: Create File
+        run: |
+          echo "Hello from Self-Hosted Runner" > test.txt
+
+      - name: Verify File
+        run: ls -l test.txt
