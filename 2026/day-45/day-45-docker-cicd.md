@@ -47,7 +47,7 @@ Test it: push to a feature branch and verify the image is built but NOT pushed.
 
 On the main branch, the image was built and pushed to Docker Hub
 
-![image](images/task4.png)
+![image](images/task5.png)
 
 On the feature-test branch, the image was built and the push step was skipped.
 
@@ -58,7 +58,8 @@ On the feature-test branch, the image was built and the push step was skipped.
 2. Add it to your `README.md`
 3. Push — the badge should show green
 
-![image](images/task5.png)
+![image](images/task4.png)
+
 
 ---
 
