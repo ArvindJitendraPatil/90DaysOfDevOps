@@ -15,7 +15,7 @@ jobs:
         id: greet
         uses: ./.github/actions/setup-and-greet
         with:
-          name: Sanket
+          name: Arvind
           language: es
 
       - name: Verify Output
