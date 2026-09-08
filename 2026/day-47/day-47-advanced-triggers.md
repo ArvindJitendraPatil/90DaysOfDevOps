@@ -14,12 +14,12 @@ Create `.github/workflows/pr-lifecycle.yml` that triggers on `pull_request` with
 
 Test it: create a PR, push an update to it, then merge it. Watch the workflow fire each time with a different event type.
 
-   ![image](images/taks1.png)
-   ![image](images/taks1.1.png)
-   ![image](images/taks1.2.png)
-   ![image](images/tasks1.3.png)
-   ![image](images/tasks1.4.png)
-   ![image](images/tasks1.5.png)
+   ![image](images/task1.png)
+   ![image](images/task1.1.png)
+   ![image](images/task1.2.png)
+   ![image](images/task1.3.png)
+   ![image](images/task1.4.png)
+   ![image](images/task1.5.png)
 
    [PR-Lifecycle](workflows/pr-lifecycle.yml)
 
