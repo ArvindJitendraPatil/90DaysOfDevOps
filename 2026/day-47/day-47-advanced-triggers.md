@@ -154,7 +154,7 @@ Create two workflows:
 2. Set it to respond to event type: `deploy-request`
 3. Print the client payload: `${{ github.event.client_payload.environment }}`
 4. Trigger it using `curl` or `gh`:
-   ``curl -L -X POST -H "Accept: application/vnd.github+json" -H "Authorization: Bearer 
+   ```curl -L -X POST -H "Accept: application/vnd.github+json" -H "Authorization: Bearer 
      $GH_PAT" -H "X-GitHub-Api-Version: 2022-11-28" 
      https://api.github.com/repos/ArvindJitendraPatil/github-actions-practice/dispatches -d '{"event_type":"deploy-request","client_payload":{"environment":"production"}}'
    ```
