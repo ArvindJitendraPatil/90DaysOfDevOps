@@ -29,7 +29,7 @@ jobs:
 
     defaults:
       run:
-        working-directory: 2026/day-48
+        working-directory: 2026/day-48/github-actions-capstone
 
     steps:
       - name: Checkout code
