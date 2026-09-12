@@ -62,3 +62,20 @@ jobs:
           IMAGE_URL="${{ secrets.docker_username }}/${{ inputs.image_name }}:sha-${{ inputs.tag }}"
           echo "image_url=$IMAGE_URL" >> "$GITHUB_OUTPUT"
           echo "Docker image: $IMAGE_URL"
+
+      - name: Run Trivy vulnerability scan
+        uses: aquasecurity/trivy-action@0.35.0
+        with:
+          image-ref: ${{ secrets.docker_username }}/${{ inputs.image_name }}:${{ inputs.tag }}
+          format: table
+          output: trivy-report.txt
+          severity: CRITICAL
+          exit-code: 1
+          trivyignores: ${{ github.workspace }}/.trivyignore
+
+      - name: Upload Trivy scan report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: trivy-scan-report
+          path: trivy-report.txt
