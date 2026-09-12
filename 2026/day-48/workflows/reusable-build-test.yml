@@ -1,0 +1,66 @@
+name: Reusable Build and Test
+
+on:
+  workflow_call:
+    inputs:
+      python_version:
+        description: "Python version to use"
+        required: false
+        type: string
+        default: "3.12"
+
+      run_tests:
+        description: "Whether to run tests"
+        required: false
+        type: boolean
+        default: true
+
+    outputs:
+      test_result:
+        description: "Result of the tests"
+        value: ${{ jobs.build-test.outputs.test_result }}
+
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+
+    outputs:
+      test_result: ${{ steps.test_result.outputs.result }}
+
+    defaults:
+      run:
+        working-directory: 2026/day-48/github-actions-capstone
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ inputs.python_version }}
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run tests
+        id: tests
+        if: ${{ inputs.run_tests }}
+        run: |
+          chmod +x tests/test_health.sh
+          python app/app.py > app.log 2>&1 &
+          sleep 5
+          ./tests/test_health.sh
+
+      - name: Set test result - passed
+        id: test_result
+        if: ${{ success() }}
+        run: |
+          echo "result=passed" >> "$GITHUB_OUTPUT"
+
+      - name: Set test result - failed
+        if: ${{ failure() }}
+        run: |
+          echo "result=failed" >> "$GITHUB_OUTPUT"
