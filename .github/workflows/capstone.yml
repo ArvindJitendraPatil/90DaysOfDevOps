@@ -25,5 +25,5 @@ jobs:
       image_name: github-actions-capstone
       tag: latest
     secrets:
-      docker_username: ${{ secrets.DOCKER_USERNAME }}
-      docker_token: ${{ secrets.DOCKER_TOKEN }}
+      docker_username: ${{ secrets.docker_username }}
+      docker_token: ${{ secrets.docker_token }}
