@@ -1,0 +1,29 @@
+name: Day 48 Capstone
+
+on:
+  workflow_dispatch:
+
+  push:
+    branches:
+      - master
+
+jobs:
+
+  build-test:
+    name: Build and Test
+    uses: ./.github/workflows/reusable-build-test.yml
+    with:
+      python_version: "3.12"
+      run_tests: true
+
+  docker-build-push:
+    name: Docker Build and Push
+    needs: build-test
+    if: ${{ needs.build-test.result == 'success' }}
+    uses: ./.github/workflows/reusable-docker.yml
+    with:
+      image_name: github-actions-capstone
+      tag: latest
+    secrets:
+      docker_username: ${{ secrets.DOCKER_USERNAME }}
+      docker_token: ${{ secrets.DOCKER_TOKEN }}
