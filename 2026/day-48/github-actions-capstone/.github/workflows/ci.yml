@@ -1,0 +1,16 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  build-test:
+    uses: ./.github/workflows/reusable-build-test.yml
+    with:
+      python_version: "3.12"
+      run_tests: true
