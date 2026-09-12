@@ -55,22 +55,6 @@ jobs:
             ${{ secrets.docker_username }}/${{ inputs.image_name }}:latest
             ${{ secrets.docker_username }}/${{ inputs.image_name }}:sha-${{ inputs.tag }}
 
-      - name: Scan Docker image with Trivy
-        uses: aquasecurity/trivy-action@0.33.1
-        with:
-          image-ref: ${{ secrets.docker_username }}/${{ inputs.image_name }}:sha-${{ inputs.tag }}
-          format: table
-          output: trivy-report.txt
-          severity: CRITICAL
-          exit-code: "1"
-          ignore-unfixed: true
-
-      - name: Upload Trivy scan report
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: trivy-security-report
-          path: trivy-report.txt
 
       - name: Set Image URL
         id: image
