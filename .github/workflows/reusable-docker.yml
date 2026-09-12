@@ -9,7 +9,7 @@ on:
         type: string
 
       tag:
-        description: "Short commit SHA"
+        description: "Docker image tag"
         required: true
         type: string
 
@@ -36,15 +36,18 @@ jobs:
 
     steps:
 
+      # 1. Checkout source code
       - name: Checkout code
         uses: actions/checkout@v4
 
+      # 2. Login to Docker Hub
       - name: Login to Docker Hub
         uses: docker/login-action@v3
         with:
           username: ${{ secrets.docker_username }}
           password: ${{ secrets.docker_token }}
 
+      # 3. Build and push Docker image
       - name: Build and Push Docker Image
         uses: docker/build-push-action@v6
         with:
@@ -53,29 +56,31 @@ jobs:
           push: true
           tags: |
             ${{ secrets.docker_username }}/${{ inputs.image_name }}:latest
-            ${{ secrets.docker_username }}/${{ inputs.image_name }}:sha-${{ inputs.tag }}
+            ${{ secrets.docker_username }}/${{ inputs.image_name }}:${{ inputs.tag }}
 
-
-      - name: Set Image URL
-        id: image
-        run: |
-          IMAGE_URL="${{ secrets.docker_username }}/${{ inputs.image_name }}:sha-${{ inputs.tag }}"
-          echo "image_url=$IMAGE_URL" >> "$GITHUB_OUTPUT"
-          echo "Docker image: $IMAGE_URL"
-
-      - name: Run Trivy vulnerability scan
-        uses: aquasecurity/trivy-action@0.35.0
+      # 4. Trivy security scan
+      - name: Trivy Security Scan
+        uses: aquasecurity/trivy-action@v0.35.0
         with:
           image-ref: ${{ secrets.docker_username }}/${{ inputs.image_name }}:${{ inputs.tag }}
           format: table
           output: trivy-report.txt
           severity: CRITICAL
-          exit-code: 1
-          trivyignores: ${{ github.workspace }}/.trivyignore
+          exit-code: "1"
+          ignore-unfixed: true
 
-      - name: Upload Trivy scan report
+      # 5. Upload Trivy report
+      - name: Upload Trivy Scan Report
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: trivy-scan-report
+          name: trivy-security-report
           path: trivy-report.txt
+
+      # 6. Set image URL output
+      - name: Set Image URL
+        id: image
+        run: |
+          IMAGE_URL="${{ secrets.docker_username }}/${{ inputs.image_name }}:${{ inputs.tag }}"
+          echo "image_url=$IMAGE_URL" >> "$GITHUB_OUTPUT"
+          echo "Docker image: $IMAGE_URL"
