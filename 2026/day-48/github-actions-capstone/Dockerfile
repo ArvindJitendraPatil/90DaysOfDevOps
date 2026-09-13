@@ -4,6 +4,9 @@ WORKDIR /app
 
 COPY requirements.txt .
 
+# Update Debian packages to latest security patches
+RUN sudo apt-get update && sudo apt-get upgrade -y && rm -rf /var/lib/apt/lists/*
+
 RUN pip install --no-cache-dir -r requirements.txt
 
 COPY app/ ./app/
@@ -11,3 +14,4 @@ COPY app/ ./app/
 EXPOSE 5000
 
 CMD ["python", "app/app.py"]
+
