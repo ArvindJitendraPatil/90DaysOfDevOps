@@ -5,8 +5,9 @@ WORKDIR /app
 COPY requirements.txt .
 
 # Update Debian packages to latest security patches
-RUN sudo apt-get update && sudo apt-get upgrade -y && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get upgrade -y && rm -rf /var/lib/apt/lists/*
 
+# Install Python dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
 COPY app/ ./app/
