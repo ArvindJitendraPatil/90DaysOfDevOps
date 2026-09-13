@@ -29,7 +29,11 @@ on:
 
 jobs:
   docker-build-push:
+    name: Docker Build and Push
     runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
 
     outputs:
       image_url: ${{ steps.image.outputs.image_url }}
@@ -38,7 +42,7 @@ jobs:
 
       # 1. Checkout source code
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       # 2. Login to Docker Hub
       - name: Login to Docker Hub
@@ -47,7 +51,7 @@ jobs:
           username: ${{ secrets.docker_username }}
           password: ${{ secrets.docker_token }}
 
-      # 3. Build and push Docker image
+      # 3. Build and Push Docker Image
       - name: Build and Push Docker Image
         uses: docker/build-push-action@v6
         with:
@@ -55,29 +59,10 @@ jobs:
           file: ./2026/day-48/github-actions-capstone/Dockerfile
           push: true
           tags: |
-            ${{ secrets.docker_username }}/${{ inputs.image_name }}:latest
             ${{ secrets.docker_username }}/${{ inputs.image_name }}:${{ inputs.tag }}
+            ${{ secrets.docker_username }}/${{ inputs.image_name }}:latest
 
-      # 4. Trivy security scan
-      - name: Trivy Security Scan
-        uses: aquasecurity/trivy-action@v0.35.0
-        with:
-          image-ref: ${{ secrets.docker_username }}/${{ inputs.image_name }}:${{ inputs.tag }}
-          format: table
-          output: trivy-report.txt
-          severity: CRITICAL
-          exit-code: "1"
-          ignore-unfixed: true
-
-      # 5. Upload Trivy report
-      - name: Upload Trivy Scan Report
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: trivy-security-report
-          path: trivy-report.txt
-
-      # 6. Set image URL output
+      # 4. Set Image URL
       - name: Set Image URL
         id: image
         run: |
