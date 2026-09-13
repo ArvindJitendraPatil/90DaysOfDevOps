@@ -1,4 +1,4 @@
-name: Docker Build and Push in master
+name: Reusable Docker Build and Push
 
 on:
   workflow_call:
@@ -60,7 +60,7 @@ jobs:
 
       # 4. Trivy security scan
       - name: Trivy Security Scan
-        uses: aquasecurity/trivy-action@0.14.0
+        uses: aquasecurity/trivy-action@v0.35.0
         with:
           image-ref: ${{ secrets.docker_username }}/${{ inputs.image_name }}:${{ inputs.tag }}
           format: table
