@@ -1,0 +1,44 @@
+name: master PR Pipeline
+
+on:
+  pull_request:
+    branches:
+      - master
+    types:
+      - opened
+      - synchronize
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  build-test:
+    name: PR Build and Test
+    uses: ./.github/workflows/reusable-build-test.yml
+    with:
+      python_version: "3.12"
+      run_tests: true
+
+  dependency-scan:
+    name: Dependency Vulnerability Scan
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check Dependencies for Vulnerabilities
+        uses: actions/dependency-review-action@v4
+        with:
+          fail-on-severity: critical
+
+  pr-comment:
+    name: PR Comment
+    needs: build-test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print PR summary
+        run: |
+          echo "PR checks passed for branch: ${{ github.head_ref }}"
+      - name: Add summary
+        run: |
+          echo "## PR Checks" >> "$GITHUB_STEP_SUMMARY"
+          echo "✅ PR checks passed for branch: \`${{ github.head_ref }}\`" >> "$GITHUB_STEP_SUMMARY"
+
