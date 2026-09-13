@@ -49,7 +49,7 @@ jobs:
     steps:
       - name: Print PR Summary
         run: |
-          echo "======================================"
+          echo "check file is pull or not"
           echo "          DAY 49 PR PIPELINE"
           echo "======================================"
           echo "PR Branch   : ${{ github.head_ref }}"
