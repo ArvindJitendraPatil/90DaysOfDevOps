@@ -314,9 +314,8 @@ Each stage has a specific responsibility.
 
 Add the Jenkins pipeline screenshot here:
 
-```text
 ![Task 1 Pipeline](screenshots/task-1-pipeline.png)
-```
+
 
 ---
 
