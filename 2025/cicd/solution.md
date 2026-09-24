@@ -518,9 +518,9 @@ They are especially useful for development workflows where feature branches need
 
 ## Screenshot
 
-```text
+
 ![Task 2 Multibranch](screenshots/task-2-multibranch.png)
-```
+![Task 2 Multibranch](screenshots/task-2.1-checkbranches.png)
 
 ---
 
