@@ -584,7 +584,7 @@ Permanent Agent
 Remote root directory:
 
 ```text
-/home/jenkins-agent
+/home/asus/jenkins-agent
 ```
 
 Label:
