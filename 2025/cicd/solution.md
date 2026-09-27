@@ -877,7 +877,7 @@ jenkins-shared-library
 Clone:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/jenkins-shared-library.git
+git clone https://github.com/ArvindJitendraPatil/jenkins-shared-library.git
 cd jenkins-shared-library
 ```
 
@@ -1023,14 +1023,21 @@ Examples include:
 
 ## Objective
 
-Scan Docker images for known vulnerabilities as part of CI/CD.
+Integrate **Trivy** into a Jenkins CI/CD pipeline to scan Docker images for known vulnerabilities and prevent deployment when HIGH or CRITICAL vulnerabilities are detected.
 
 ---
 
 ## Step 1: Install Docker
 
+Update the package repository:
+
 ```bash
 sudo apt update
+```
+
+Install Docker:
+
+```bash
 sudo apt install docker.io -y
 ```
 
@@ -1040,21 +1047,64 @@ Start Docker:
 sudo service docker start
 ```
 
-Verify:
+Verify the installation:
 
 ```bash
 docker --version
 ```
 
+Check Docker:
+
 ```bash
 docker ps
 ```
+
+If Docker permission is denied:
+
+```bash
+sudo usermod -aG docker $USER
+```
+
+Restart the terminal/session after running the command.
 
 ---
 
 ## Step 2: Install Trivy
 
-Install Trivy using the appropriate official package/repository method for the Ubuntu environment.
+Install the required packages:
+
+```bash
+sudo apt-get install wget gnupg -y
+```
+
+Add the Trivy repository key:
+
+```bash
+wget -qO - https://aquasecurity.github.io/trivy-repo/deb/public.key | \
+gpg --dearmor | \
+sudo tee /usr/share/keyrings/trivy.gpg > /dev/null
+```
+
+Add the Trivy repository:
+
+```bash
+echo "deb [signed-by=/usr/share/keyrings/trivy.gpg] \
+https://aquasecurity.github.io/trivy-repo/deb \
+generic main" | \
+sudo tee /etc/apt/sources.list.d/trivy.list
+```
+
+Update the package list:
+
+```bash
+sudo apt update
+```
+
+Install Trivy:
+
+```bash
+sudo apt install trivy -y
+```
 
 Verify:
 
@@ -1064,12 +1114,33 @@ trivy --version
 
 ---
 
-## Step 3: Build Docker Image
+## Step 3: Create a Sample Docker Application
 
-Example:
+Create a project directory:
 
 ```bash
-docker build -t yourusername/sample-app:v1.0 .
+mkdir trivy-jenkins-demo
+cd trivy-jenkins-demo
+```
+
+Create a Dockerfile:
+
+```bash
+vim Dockerfile
+```
+
+Add:
+
+```dockerfile
+FROM nginx:latest
+
+EXPOSE 80
+```
+
+Build the Docker image:
+
+```bash
+docker build -t sample-app:v1.0 .
 ```
 
 Verify:
@@ -1078,39 +1149,104 @@ Verify:
 docker images
 ```
 
----
+Expected image:
 
-## Step 4: Scan Image
-
-```bash
-trivy image yourusername/sample-app:v1.0
+```text
+sample-app    v1.0
 ```
 
-For HIGH and CRITICAL vulnerabilities:
+---
+
+## Step 4: Scan the Docker Image
+
+Run a complete vulnerability scan:
+
+```bash
+trivy image sample-app:v1.0
+```
+
+Scan only HIGH and CRITICAL vulnerabilities:
 
 ```bash
 trivy image \
 --severity HIGH,CRITICAL \
-yourusername/sample-app:v1.0
+sample-app:v1.0
+```
+
+Trivy checks the image against its vulnerability database and reports known vulnerabilities.
+
+Example:
+
+```text
+Library        Vulnerability      Severity
+-------------  -----------------  --------
+package-name   CVE-XXXXXXXX       HIGH
+package-name   CVE-XXXXXXXX       CRITICAL
+```
+
+The actual vulnerabilities depend on the image version and the current Trivy vulnerability database.
+
+---
+
+# Step 5: Configure Jenkins
+
+The Jenkins agent executing the pipeline must have access to both Docker and Trivy.
+
+Verify:
+
+```bash
+docker --version
+```
+
+```bash
+trivy --version
+```
+
+Verify Docker access:
+
+```bash
+docker ps
+```
+
+If Jenkins receives a Docker permission error, add the Jenkins user to the Docker group:
+
+```bash
+sudo usermod -aG docker jenkins
+```
+
+Restart Jenkins:
+
+```bash
+sudo systemctl restart jenkins
 ```
 
 ---
 
-## Step 5: Add Trivy to Jenkins Pipeline
+# Step 6: Create Jenkinsfile
+
+Create a file named:
+
+```text
+Jenkinsfile
+```
+
+Use the following pipeline:
 
 ```groovy
 pipeline {
     agent any
 
     environment {
-        IMAGE_NAME = 'yourusername/sample-app:v1.0'
+        IMAGE_NAME = 'sample-app:v1.0'
     }
 
     stages {
 
         stage('Build') {
             steps {
-                sh 'docker build -t $IMAGE_NAME .'
+                sh '''
+                    docker build -t $IMAGE_NAME .
+                '''
             }
         }
 
@@ -1120,6 +1256,7 @@ pipeline {
                     trivy image \
                     --severity HIGH,CRITICAL \
                     --exit-code 1 \
+                    --no-progress \
                     $IMAGE_NAME
                 '''
             }
@@ -1136,27 +1273,311 @@ pipeline {
 
 ---
 
-## Verification
+# Step 7: Understand the Jenkins Pipeline
 
-The pipeline now contains:
+The pipeline contains three stages:
 
 ```text
 Build
- ↓
+  ↓
 Vulnerability Scan
- ↓
+  ↓
 Deploy
 ```
 
-The scan can prevent the pipeline from continuing when the configured vulnerability criteria cause Trivy to return a failure code.
+### Build
+
+Jenkins builds the Docker image:
+
+```bash
+docker build -t sample-app:v1.0 .
+```
+
+### Vulnerability Scan
+
+Trivy scans the Docker image:
+
+```bash
+trivy image \
+--severity HIGH,CRITICAL \
+--exit-code 1 \
+sample-app:v1.0
+```
+
+### Deploy
+
+If the scan passes, Jenkins continues to the deployment stage.
 
 ---
 
-## Observation
+# Step 8: Understand `--exit-code 1`
 
-Security scanning should be integrated into CI/CD so vulnerabilities can be identified before an image is deployed.
+The following option is important:
+
+```bash
+--exit-code 1
+```
+
+It tells Trivy to return exit code `1` when vulnerabilities matching the configured severity are found.
+
+Therefore:
+
+### Scenario 1: No HIGH/CRITICAL vulnerabilities
+
+```text
+Build
+  ↓
+Trivy Scan
+  ↓
+No HIGH/CRITICAL vulnerabilities
+  ↓
+Deploy
+  ↓
+SUCCESS
+```
+
+### Scenario 2: HIGH/CRITICAL vulnerabilities found
+
+```text
+Build
+  ↓
+Trivy Scan
+  ↓
+HIGH/CRITICAL vulnerabilities found
+  ↓
+Exit Code 1
+  ↓
+Pipeline FAILED
+  ↓
+Deploy is skipped
+```
+
+This creates a security gate before deployment.
 
 ---
+
+# Step 9: Push Project to GitHub
+
+Initialize Git:
+
+```bash
+git init
+```
+
+Add the files:
+
+```bash
+git add .
+```
+
+Commit:
+
+```bash
+git commit -m "Add Trivy vulnerability scanning"
+```
+
+Add your GitHub repository:
+
+```bash
+git remote add origin https://github.com/ArvindJitendraPatil/trivy-jenkins-demo.git
+```
+
+Push:
+
+```bash
+git branch -M main
+git push -u origin main
+```
+
+---
+
+# Step 10: Create Jenkins Pipeline Job
+
+In Jenkins:
+
+```text
+Jenkins Dashboard
+       ↓
+New Item
+       ↓
+Enter project name
+       ↓
+Pipeline
+       ↓
+OK
+```
+
+Under **Pipeline**:
+
+Select:
+
+```text
+Definition:
+Pipeline script from SCM
+```
+
+Select:
+
+```text
+SCM:
+Git
+```
+
+Enter your GitHub repository URL.
+
+Set:
+
+```text
+Branch:
+*/main
+```
+
+Set:
+
+```text
+Script Path:
+Jenkinsfile
+```
+
+Click:
+
+```text
+Save
+```
+
+Then click:
+
+```text
+Build Now
+```
+
+---
+
+# Verification
+
+The Jenkins pipeline should execute:
+
+```text
+Started
+   ↓
+Build
+   ↓
+Docker image created
+   ↓
+Vulnerability Scan
+   ↓
+Trivy scans image
+   ↓
+Deploy
+   ↓
+Finished
+```
+
+If HIGH or CRITICAL vulnerabilities are detected:
+
+```text
+Build
+   ↓
+Vulnerability Scan
+   ↓
+Trivy returns exit code 1
+   ↓
+Pipeline FAILED
+   ↓
+Deploy does not execute
+```
+
+---
+
+# Final Jenkinsfile
+
+```groovy
+pipeline {
+    agent any
+
+    environment {
+        IMAGE_NAME = 'sample-app:v1.0'
+    }
+
+    stages {
+
+        stage('Build') {
+            steps {
+                sh 'docker build -t $IMAGE_NAME .'
+            }
+        }
+
+        stage('Vulnerability Scan') {
+            steps {
+                sh '''
+                    trivy image \
+                    --severity HIGH,CRITICAL \
+                    --exit-code 1 \
+                    --no-progress \
+                    $IMAGE_NAME
+                '''
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                echo 'Deploying application...'
+            }
+        }
+    }
+}
+```
+
+---
+
+# Observation
+
+Trivy was successfully integrated into the Jenkins CI/CD pipeline.
+
+The pipeline now performs:
+
+```text
+Source Code
+    ↓
+Jenkins
+    ↓
+Docker Build
+    ↓
+Trivy Vulnerability Scan
+    ↓
+Security Gate
+    ↓
+Deploy
+```
+
+The vulnerability scan helps identify known security issues in Docker images before deployment.
+
+Using:
+
+```bash
+--severity HIGH,CRITICAL
+--exit-code 1
+```
+
+allows the CI/CD pipeline to stop when vulnerabilities meeting the configured criteria are detected.
+
+---
+
+# Key Learning
+
+* Installed Docker
+* Installed Trivy
+* Built a Docker image
+* Scanned the Docker image
+* Configured HIGH and CRITICAL vulnerability scanning
+* Integrated Trivy with Jenkins
+* Added a security gate to the CI/CD pipeline
+* Prevented deployment when the configured vulnerability threshold is exceeded
+
+## Interview Explanation
+
+> I integrated Trivy into a Jenkins CI/CD pipeline for container security scanning. After building the Docker image, Jenkins runs Trivy against the image and checks for HIGH and CRITICAL vulnerabilities. I configured `--exit-code 1`, so the pipeline fails when matching vulnerabilities are detected, preventing the deployment stage from running. This helps implement security scanning as part of the CI/CD process.
+
 
 ## Screenshot
 
