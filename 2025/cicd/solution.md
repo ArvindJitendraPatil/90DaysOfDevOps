@@ -892,7 +892,7 @@ mkdir vars
 Create:
 
 ```bash
-nano vars/sayHello.groovy
+vim vars/sayHello.groovy
 ```
 
 Add:
