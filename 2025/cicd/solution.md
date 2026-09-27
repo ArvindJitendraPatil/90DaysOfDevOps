@@ -842,9 +842,7 @@ RBAC reduces this type of unnecessary access.
 
 ## Screenshot
 
-```text
 ![Task 4 RBAC](screenshots/task-4-rbac.png)
-```
 
 ---
 
