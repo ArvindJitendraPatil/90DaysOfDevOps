@@ -18,13 +18,13 @@
     ![images](images/task1.png)
 
 
-    ![Ubuntu](images/ubuntu.png)
+    ![Ubuntu](images/ubuntu-job1.1.png)
 
 
-    ![Windows](images/windows.png)
+    ![Windows](images/windows-job1.2.png)
 
 
-    ![MacOs](images/macos.png)
+    ![MacOs](images/macos-job1.3.png)
 
     [GithubRunner](workflows/github-runner.yml)
 
@@ -72,7 +72,7 @@
 
 **Verify:** Your runner appears in the Runners list with a green dot.
 
-   ![image](images/selfhosted.png)
+   ![image](images/task3.png)
 
 ---
 
@@ -88,12 +88,12 @@
 **Verify:** Check your machine — is the file there?
    - Yes,file is there
 
+   ![image](images/task4.1.png)
 
-   ![image](images/selfhosted.png)
+   ![image](images/task4.2.png)
 
 
    ![image](images/task4.png)
-
 
    [ec2-hosted](workflows/ec2-hosted.yml)
 
@@ -104,11 +104,11 @@
 2. Update your workflow to use `runs-on: [self-hosted, my-linux-runner]`
 3. Trigger it — does it still pick up the job?
 
-   ![images](images/label.png)
-
-
    ![images](images/task5.png)
 
+   ![images](images/task5.1.png)
+
+   ![images](images/task5.2.png)
 
    Why are labels useful when you have multiple self-hosted runners?
 
