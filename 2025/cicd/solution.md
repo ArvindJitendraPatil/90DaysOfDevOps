@@ -663,9 +663,9 @@ This can improve:
 
 ## Screenshot
 
-```text
+
 ![Task 3 Jenkins Agent](screenshots/task-3-agent.png)
-```
+![Task 3 Jenkins Agent](screenshots/task-3.1-linux-agent.png)
 
 ---
 
