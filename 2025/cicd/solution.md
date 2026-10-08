@@ -995,9 +995,7 @@ Benefits:
 
 ## Screenshot
 
-```text
 ![Task 5 Shared Library](screenshots/task-5-shared-library.png)
-```
 
 ---
 
@@ -1581,9 +1579,8 @@ allows the CI/CD pipeline to stop when vulnerabilities meeting the configured cr
 
 ## Screenshot
 
-```text
 ![Task 6 Trivy Scan](screenshots/task-6-trivy.png)
-```
+![Task 6 Trivy Scan](screenshots/task-6-trvivy-succeed.png)
 
 ---
 
@@ -1693,9 +1690,10 @@ Pipeline parameters make CI/CD workflows more flexible because the same pipeline
 
 ## Screenshot
 
-```text
+
 ![Task 7 Parameters](screenshots/task-7-parameters.png)
-```
+![Task 7 Parameters](screenshots/task-7.1-dev.png)
+![Task 7 Parameters](screenshots/task-7.2-prd.png)
 
 ---
 
