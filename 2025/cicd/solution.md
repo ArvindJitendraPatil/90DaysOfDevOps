@@ -1836,9 +1836,7 @@ Automated notifications help development and operations teams know when builds s
 
 ## Screenshot
 
-```text
 ![Task 8 Email Notification](screenshots/task-8-email.png)
-```
 
 ---
 
