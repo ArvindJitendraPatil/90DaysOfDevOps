@@ -42,6 +42,7 @@ From memory, draw or describe the Kubernetes architecture. Your diagram should i
 
 
     ![image](images/k8s-architecture.png)
+    ![image](images/task1.png)
 
 
 
@@ -227,3 +228,5 @@ kubectl config view
 - kubeconfig is a configuration file used by Kubernetes clients kubectl to connect to a Kubernetes cluster.
 - It stores cluster details, user credentials, and contexts.
 - Location: ~/.kube/config
+
+![image](images/task-ans.png)
