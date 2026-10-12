@@ -270,7 +270,7 @@ kubectl get pods --show-labels
 kubectl get pods -l app=nginx
 kubectl get pods -l environment=dev
 
-![image](images/filter-label-T5)
+![image](images/filter-label-T5.png)
 
 # Add a label to an existing pod
 kubectl label pod nginx-pod environment=production
