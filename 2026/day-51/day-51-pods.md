@@ -324,6 +324,6 @@ Example: If we configure 3 replicas and one Pod gets deleted, Kubernetes creates
 
 Remember: Standalone Pod → No automatic replacement. Deployment → Automatic replacement to maintain the desired replica count.
 
-![image](images/run-cmd)
+![image](images/run-cmd.png)
 
 ---
