@@ -1,6 +1,6 @@
 # Day 51 – Kubernetes Manifests and Your First Pods
 
-![image](images/my-cluster)
+![image](images/my-cluster.png)
 
 ## The Anatomy of a Kubernetes Manifest
 
