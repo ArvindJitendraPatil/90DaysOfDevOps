@@ -23,7 +23,7 @@ Delete the Deployment before moving on.
 
 
 **After**
-![image](images/after.png)
+![image](images/After.png)
 
 ---
 
